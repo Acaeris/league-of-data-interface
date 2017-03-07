@@ -1,10 +1,17 @@
-<p>Howdy! Here's a list of awesome computer scientists. Do you know any others? Add to the list yourself.</p>
+<div class="ui container segment">
+    <p>Howdy! Here's a list of awesome computer scientists. Do you know any others? Add to the list yourself.</p>
 
-<form (submit)="addName()">
-  <input [(ngModel)]="newName" name="newName" placeholder="Awesome Computer Scientist">
-  <button type="submit">Add</button>
-</form>
+    <form class="ui form" (submit)="addName()">
+        <div class="ui action input">
+            <input [(ngModel)]="newName" name="newName" placeholder="Awesome Computer Scientist">
+            <button class="ui button" type="submit">Add</button>
+        </div>
+    </form>
 
-<ul>
-  <li *ngFor="let name of names">{{name}}</li>
-</ul>
+    <div class="ui list">
+        <div class="item" *ngFor="let name of names">
+            <i class="user icon"></i>
+            <span class="content">{{name}}</span>
+        </div>
+    </div>
+</div>
