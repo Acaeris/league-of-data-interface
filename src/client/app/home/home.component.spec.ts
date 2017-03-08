@@ -40,7 +40,7 @@ export function main() {
             fixture.detectChanges();
 
             expect(homeInstance.nameListService).toEqual(jasmine.any(MockNameListService));
-            expect(homeDOMEl.querySelectorAll('li').length).toEqual(3);
+            expect(homeDOMEl.querySelectorAll('.list .item').length).toEqual(3);
             expect(nameListServiceSpy.calls.count()).toBe(1);
 
             homeInstance.newName = 'Minko';
@@ -48,8 +48,8 @@ export function main() {
 
             fixture.detectChanges();
 
-            expect(homeDOMEl.querySelectorAll('li').length).toEqual(4);
-            expect(homeDOMEl.querySelectorAll('li')[3].textContent).toEqual('Minko');
+            expect(homeDOMEl.querySelectorAll('.list .item').length).toEqual(4);
+            expect(homeDOMEl.querySelectorAll('.list .item .content')[3].textContent).toEqual('Minko');
           });
 
       }));

@@ -1,6 +1,4 @@
-<div class="ui top attached inverted menu">
-    <h3 class="header item">League of Data</h3>
-    <div class="right menu">
-        <a class="item"><i class="ellipsis vertical icon"></i></a>
-    </div> 
-</div>
+<nav class="ui vertical inverted sidebar menu">
+    <a class="item" [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">League of Data</a>
+    <a class="item" [routerLink]="['/about']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">ABOUT</a>
+</nav>
