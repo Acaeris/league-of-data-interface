@@ -2,38 +2,49 @@
 @import 'mixins';
 
 @media (max-width: 768px) {
-    .ui.desktop {
-        display: none !important;
+  .ui {
+    &.desktop {
+      display: none !important;
     }
-}
 
-@media (min-width: 769px) {
-    .ui.mobile {
-        display: none !important;
+    &.container {
+      margin: 0 !important;
     }
+  }
+}
+@media (min-width: 769px) {
+  .ui {
+    &.mobile {
+      display: none !important;
+    }
+  }
 }
 
 body.pushable > .pusher {
-    background-color: $c-paper;
+  background-color: $c-paper;
 }
 
 .ui {
-    &.label {
-        &.bronze {
-            @include linear-split($c-bronze, darken($c-bronze, 8%));
-            color: $c-white;
-        }
-        &.silver {
-            @include linear-split($c-silver, darken($c-silver, 8%));
-        }
-        &.gold {
-            @include linear-split($c-gold, darken($c-gold, 8%));
-        }
-        &.platinum {
-            @include linear-split($c-platinum, darken($c-platinum, 8%));
-        }
-        &.diamond {
-            @include linear-split($c-diamond, darken($c-diamond, 8%));
-        }
+  &.label {
+    &.bronze {
+      @include linear-split($c-bronze, darken($c-bronze, 8%));
+      color: $c-white;
     }
+
+    &.silver {
+      @include linear-split($c-silver, darken($c-silver, 8%));
+    }
+
+    &.gold {
+      @include linear-split($c-gold, darken($c-gold, 8%));
+    }
+
+    &.platinum {
+      @include linear-split($c-platinum, darken($c-platinum, 8%));
+    }
+
+    &.diamond {
+      @include linear-split($c-diamond, darken($c-diamond, 8%));
+    }
+  }
 }

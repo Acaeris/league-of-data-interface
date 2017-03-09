@@ -7,12 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AboutModule } from './about/about.module';
 import { HomeModule } from './home/home.module';
+import { ProfileModule } from './profile/profile.module';
 import { SharedModule } from './shared/shared.module';
 
 import { SemanticDropdownDirective } from './directives/suiDropdown.directive';
 
 @NgModule({
-  imports: [BrowserModule, HttpModule, AppRoutingModule, AboutModule, HomeModule, SharedModule.forRoot()],
+  imports: [BrowserModule, HttpModule, AppRoutingModule, AboutModule, HomeModule, ProfileModule, SharedModule.forRoot()],
   declarations: [
       AppComponent,
       SemanticDropdownDirective
