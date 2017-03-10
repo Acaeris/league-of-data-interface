@@ -5,6 +5,7 @@ import { MockBackend } from '@angular/http/testing';
 import { Observable } from 'rxjs/Observable';
 
 import { ProfileService } from './profile.service';
+import { Profile } from '../../models/profile';
 
 export function main() {
     describe('Profile Service', () => {
@@ -35,11 +36,23 @@ export function main() {
             let mockBackend = TestBed.get(MockBackend);
 
             mockBackend.connections.subscribe((c: any) => {
-                c.mockRespond(new Response(new ResponseOptions({ body: '"Acaeris"' })));
+                c.mockRespond(new Response(new ResponseOptions({ body: '{'
+                  + '"id": 24121626,'
+                  + '"name": "Acaeris",'
+                  + '"profileIconId": 1381,'
+                  + '"summonerLevel": 30,'
+                  + '"ranks": ['
+                    + '{'
+                      + '"season": 6,'
+                      + '"group": 1,'
+                      + '"rank": 2'
+                    + '}'
+                  + ']'
+                + '}' })));
             });
 
-            profileService.get().subscribe((data: any) => {
-                expect(data).toEqual("Acaeris");
+            profileService.get().subscribe((data: Profile) => {
+                expect(data.name).toEqual('Acaeris');
             });
         }));
     });

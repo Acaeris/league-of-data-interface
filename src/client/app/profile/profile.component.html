@@ -1,21 +1,71 @@
 <div class="ui container">
-  <div class="ui fluid profile card">
+  <div class="ui fluid profile card" *ngIf="profile">
     <div class="content">
       <i class="right floated star icon"></i>
-      <a class="header">{{profile}}</a>
-      <div class="meta">
-        <span class="rank">Ladder Rank 2,535,830 (92% of top)</span>
+      <div class="ui left floated small image">
+        <span class="ui left mini ribbon label">{{profile.summonerLevel}}</span>
+        <img src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/profileicon/{{profile.profileIconId}}.png" />
       </div>
-      <div class="ui labels description">
-        <span class="ui bronze label">S6 Bronze</span>
-      </div>
+      <a class="header">{{profile.name}}</a>
       <div class="meta">
-        <span class="right floated date">Last Updated: 8 months ago</span>
+        <p class="region">{{region}}</p>
+        <p class="rank">Ladder Rank 2,535,830 (92% of top)</p>
+        <div class="ui labels description">
+          <span class="ui {{Tiers[rank.group]}} label" *ngFor="let rank of profile.ranks">S{{rank.season}} {{Tiers[rank.group] | capitalize}}</span>
+        </div>
+        <p class="right floated date">Last Updated: 8 months ago</p>
       </div>
     </div>
     <div class="ui bottom attached buttons">
       <a class="ui green icon button"><i class="refresh icon"></i> Renew</a>
       <a class="ui icon button"><i class="play icon"></i>Live<span class="ui desktop"> Game</span></a>
+    </div>
+  </div>
+  <div class="ui top attached tabular small menu">
+    <a class="active item">Summary</a>
+    <a class="item">Champions</a>
+    <a class="item">Leagues</a>
+    <a class="ui desktop item">Matches</a>
+    <a class="ui desktop item">Runes</a>
+    <a class="ui desktop item">Masteries</a>
+    <div class="right menu">
+      <div class="ui mobile dropdown item">
+        <i class="horizontal ellipsis icon"></i>
+        <div class="menu">
+          <a class="item">Matches</a>
+          <a class="item">Runes</a>
+          <a class="item">Masteries</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui bottom attached segment">
+    <div class="ui stackable grid">
+      <div class="twelve wide column">
+        <div class="ui top attached inverted header segment">Performance Chart</div>
+        <div class="ui bottom attached inverted segment">
+          <canvas baseChart width="100%" height="20px"
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"
+            [options]="lineChartOptions"
+            [colors]="lineChartColors"
+            [legend]="lineChartLegend"
+            [chartType]="lineChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+          <div class="ui bottom attached small inverted secondary menu">
+            <a class="item">Monthly</a>
+            <a class="active item">Weekly</a>
+            <a class="item">Daily</a>
+          </div>
+        </div>
+      </div>
+      <div class="four wide center aligned column">
+        <div class="ui mini statistic">
+          <span class="label">Current Rank</span>
+          <span class="value">Bronze</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -27,12 +27,12 @@ export class ProjectConfig extends SeedConfig {
         {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
         {src: 'semantic-ui/dist/semantic.min.css', inject: true},
         {src: 'semantic-ui/dist/semantic.min.js', inject: 'libs'},
+        {src: 'chart.js/dist/Chart.min.js', inject: 'libs'},
       // {src: 'lodash/lodash.min.js', inject: 'libs'},
     ];
 
     // Add `local` third-party libraries to be injected/bundled.
     this.APP_ASSETS = [
-        {src: `${this.APP_SRC}/directives/semantic-ui.js`, inject: true, vendor: false}
         // {src: `${this.CSS_SRC}/path-to-lib/test-lib.css`, inject: true, vendor: false},
     ];
 

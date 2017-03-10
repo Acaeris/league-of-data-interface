@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { Profile } from '../../models/profile';
 
 /**
  * This class provides the Profile service with methods to read profile data
@@ -16,11 +17,11 @@ export class ProfileService {
 
     /**
      * Returns an Observable for the HTTP GET request for the JSON resource.
-     * @return {string} The Observable for the HTTP request.
+     * @return {Profile} The Observable for the HTTP request.
      */
-    get(): Observable<string> {
+    get(): Observable<Profile> {
         return this.http.get('assets/profile.json')
-            .map((res: Response) => res.json())
+            .map(res => <Profile>res.json())
             .catch(this.handleError);
     }
 
