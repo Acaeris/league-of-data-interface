@@ -5,10 +5,11 @@ import { ProfileRoutingModule } from './profile-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { ProfileService } from '../services/profile/profile.service';
 import { CapitalizePipe } from '../pipes/capitalize.pipe';
+import { SemanticDropdownDirective } from '../directives/suiDropdown.directive';
 
 @NgModule({
     imports: [ProfileRoutingModule, SharedModule, ChartsModule],
-    declarations: [ProfileComponent, CapitalizePipe],
+    declarations: [ProfileComponent, CapitalizePipe, SemanticDropdownDirective],
     exports: [ProfileComponent],
     providers: [ProfileService]
 })
