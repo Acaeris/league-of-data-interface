@@ -19,7 +19,8 @@ export class ProfileComponent implements OnInit {
     region: string = "EUW";
     Tiers: typeof Tiers = Tiers;
     lineChartData: Array<any> = [
-        {data: [74, 100, 150, 144, 125, 80], label: 'Rank'}
+        {data: [74, 100, 150, 144, 125, 80], label: 'Ranked'},
+        {data: [54, 55, 198, 168, 281, 166], label: 'ARAM'}
     ];
     lineChartLabels: Array<string> = ['12/30', '01/06', '01/13', '01/20', '01/27', '02/03'];
     lineChartOptions: any = {
@@ -30,9 +31,17 @@ export class ProfileComponent implements OnInit {
             backgroundColor: 'rgba(0, 120, 240, 0.4)',
             borderColor: 'rgba(0, 120, 240, 1)',
             pointBackgroundColor: 'rgba(0, 120, 240, 0.4)',
-            pointBorderColor: '#000',
-            pointHoverBackgroundColor: '#000',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
             pointHoverBorderColor: 'rgba(0, 120, 240, 1)'
+        },
+        {
+            backgroundColor: 'rgba(0, 240, 120, 0.4)',
+            borderColor: 'rgba(0, 240, 120, 1)',
+            pointBackgroundColor: 'rgba(0, 240, 120, 0.4)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgba(0, 240, 120, 1)'
         }
     ];
     lineChartLegend: boolean = false;
