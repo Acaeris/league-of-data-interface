@@ -24,7 +24,8 @@
       "jasmine",
       "node",
       "protractor",
-      "systemjs"
+      "systemjs",
+      "d3"
     ]
   },
   "exclude": [

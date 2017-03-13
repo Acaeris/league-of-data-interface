@@ -394,6 +394,7 @@ export class SeedConfig {
         'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
       '@angular/router/testing': 'node_modules/@angular/router/bundles/router-testing.umd.js',
 
+      'd3': `${this.NPM_BASE}d3/build/d3.min.js`,
       'app/*': '/app/*',
       // For test config
       'dist/dev/*': '/base/dist/dev/*',

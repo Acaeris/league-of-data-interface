@@ -43,7 +43,7 @@
     <div class="ui stackable grid">
       <div class="twelve wide column">
         <div class="ui top attached header segment">Performance Chart</div>
-        <div class="ui bottom attached segment">
+        <div class="ui attached segment">
           <canvas baseChart width="600px" height="150px"
             [datasets]="lineChartData"
             [labels]="lineChartLabels"
@@ -58,6 +58,9 @@
             <a class="active item">Weekly</a>
             <a class="item">Daily</a>
           </div>
+        </div>
+        <div class="ui bottom attached segment">
+          <ui-rankchart *ngIf="chartData" [data]="chartData"></ui-rankchart>
         </div>
       </div>
       <div class="four wide center aligned column">

@@ -28,6 +28,7 @@ export class ProjectConfig extends SeedConfig {
         {src: 'semantic-ui/dist/semantic.min.css', inject: true},
         {src: 'semantic-ui/dist/semantic.min.js', inject: 'libs'},
         {src: 'chart.js/dist/Chart.min.js', inject: 'libs'},
+        {src: 'd3/build/d3.min.js', inject: 'libs'}
       // {src: 'lodash/lodash.min.js', inject: 'libs'},
     ];
 
