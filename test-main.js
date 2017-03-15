@@ -1,9 +1,9 @@
-if (!Object.hasOwnProperty('name')) {
-  Object.defineProperty(Function.prototype, 'name', {
+if (!Object.hasOwnProperty("name")) {
+  Object.defineProperty(Function.prototype, "name", {
     get: function () {
       var matches = this.toString().match(/^\s*function\s*(\S*)\s*\(/);
       var name = matches && matches.length > 1 ? matches[1] : "";
-      Object.defineProperty(this, 'name', { value: name });
+      Object.defineProperty(this, "name", { value: name });
       return name;
     }
   });
@@ -19,8 +19,8 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000;
 __karma__.loaded = function () { };
 
 Promise.all([
-  System.import('@angular/core/testing'),
-  System.import('@angular/platform-browser-dynamic/testing')
+  System.import("@angular/core/testing"),
+  System.import("@angular/platform-browser-dynamic/testing")
 ]).then(function (providers) {
   var testing = providers[0];
   var testingBrowser = providers[1];
@@ -36,10 +36,10 @@ Promise.all([
       .map(file2moduleName)
       .map(function (path) {
         return System.import(path).then(function (module) {
-          if (module.hasOwnProperty('main')) {
+          if (module.hasOwnProperty("main")) {
             module.main();
           } else {
-            throw new Error('Module ' + path + ' does not implement main() method.');
+            throw new Error("Module " + path + " does not implement main() method.");
           }
         });
       }));
@@ -61,8 +61,7 @@ function onlySpecFiles(path) {
 
 // Normalize paths to module names.
 function file2moduleName(filePath) {
-  return filePath.replace(/\\/g, '/')
-    .replace(/^\/base\//, '')
-    .replace(/\.js$/, '');
+  return filePath.replace(/\\/g, "/")
+    .replace(/^\/base\//, "")
+    .replace(/\.js$/, "");
 }
-

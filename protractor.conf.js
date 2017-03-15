@@ -1,14 +1,14 @@
 const config = {
-  baseUrl: 'http://localhost:5555/',
+  baseUrl: "http://localhost:5555/",
 
   specs: [
-    './dist/e2e/**/*.e2e-spec.js'
+    "./dist/e2e/**/*.e2e-spec.js"
   ],
 
   exclude: [],
 
   // 'jasmine' by default will use the latest jasmine framework
-  framework: 'jasmine',
+  framework: "jasmine",
 
   // allScriptsTimeout: 110000,
 
@@ -23,7 +23,7 @@ const config = {
   directConnect: true,
 
   capabilities: {
-    browserName: 'chrome'
+    browserName: "chrome"
   },
 
   onPrepare: function() {
@@ -42,7 +42,7 @@ const config = {
 
 if (process.env.TRAVIS) {
   config.capabilities = {
-    browserName: 'firefox'
+    browserName: "firefox"
   };
 }
 
