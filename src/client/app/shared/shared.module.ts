@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MobilebarComponent } from './mobilebar/mobilebar.component';
-import { NameListService } from './name-list/name-list.service';
 
 import { SemanticSidebarDirective } from '../directives/suiSidebar.directive';
 
@@ -28,8 +27,7 @@ import { SemanticSidebarDirective } from '../directives/suiSidebar.directive';
 export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: SharedModule,
-      providers: [NameListService]
+      ngModule: SharedModule
     };
   }
 }

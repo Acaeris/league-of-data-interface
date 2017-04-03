@@ -25,7 +25,7 @@ export class ProjectConfig extends SeedConfig {
     this.NPM_DEPENDENCIES = [
         ...this.NPM_DEPENDENCIES,
         {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
-        {src: 'semantic-ui/dist/semantic.min.css', inject: true},
+        //{src: 'semantic-ui/dist/semantic.min.css', inject: true},
         {src: 'semantic-ui/dist/semantic.min.js', inject: 'libs'},
         {src: 'chart.js/dist/Chart.min.js', inject: 'libs'},
         {src: 'd3/build/d3.min.js', inject: 'libs'}
@@ -34,6 +34,8 @@ export class ProjectConfig extends SeedConfig {
 
     // Add `local` third-party libraries to be injected/bundled.
     this.APP_ASSETS = [
+        {src: '${this.APP_SRC}/semantic/semantic.min.css', inject: true, vendor: false},
+        //{src: '${this.APP_SRC}/semantic/semantic.min.js', inject: 'libs', vendor: false}
         // {src: `${this.CSS_SRC}/path-to-lib/test-lib.css`, inject: true, vendor: false},
     ];
 

@@ -1,6 +1,9 @@
 @import 'variables';
 @import 'mixins';
 
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i');
+
 @media (max-width: 768px) {
   .ui {
     &.desktop {
@@ -20,8 +23,29 @@
   }
 }
 
+body {
+  font-family: 'Raleway',"Helvetica Neue",Arial,Helvetica,sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  color: $c-gold;
+}
+
 body.pushable > .pusher {
   background-color: $c-paper;
+}
+
+.home {
+  h1 {
+    color: #000;
+  }
+}
+
+.details {
+  background-color: $c-p4;
+  color: $c-white;
 }
 
 .ui {

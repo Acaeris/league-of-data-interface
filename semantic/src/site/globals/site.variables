@@ -1,0 +1,9 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+/* Colours */
+@primaryColor: #087F92;
+
+/* Details */
+@defaultBorderRadius: 0;
