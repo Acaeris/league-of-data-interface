@@ -1,10 +1,10 @@
 import { Rank } from './rank';
 
-export interface Profile {
+export interface Summoner {
     id: number;
     name: string;
     revisionDate: number;
     profileIconId: number;
-    summonerLevel: number;
+    level: number;
     ranks: Rank[];
 }

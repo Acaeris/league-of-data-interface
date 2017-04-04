@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 /**
  * This class represents the toolbar component.
@@ -9,4 +9,6 @@ import { Component } from '@angular/core';
   templateUrl: 'mobilebar.component.html',
   styleUrls: ['mobilebar.component.css']
 })
-export class MobilebarComponent { }
+export class MobilebarComponent {
+  @Input() pageTitle;
+}

@@ -5,13 +5,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { AboutModule } from './about/about.module';
+import { ChampionModule } from './champion/champion.module';
 import { HomeModule } from './home/home.module';
-import { ProfileModule } from './profile/profile.module';
+import { SummonerModule } from './summoner/summoner.module';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  imports: [BrowserModule, HttpModule, AppRoutingModule, AboutModule, HomeModule, ProfileModule, SharedModule.forRoot()],
+  imports: [BrowserModule, HttpModule, AppRoutingModule, ChampionModule, HomeModule, SummonerModule, SharedModule.forRoot()],
   declarations: [
       AppComponent
   ],

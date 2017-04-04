@@ -28,19 +28,15 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lora', serif;
-  font-weight: 400;
-  color: $c-gold;
+  &.ui.header{
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: $c-textGold;
+  }
 }
 
 body.pushable > .pusher {
   background-color: $c-paper;
-}
-
-.home {
-  h1 {
-    color: #000;
-  }
 }
 
 .details {

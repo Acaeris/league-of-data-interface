@@ -1,7 +1,7 @@
 <sd-navbar></sd-navbar>
 <sd-toolbar></sd-toolbar>
-<sd-mobilebar></sd-mobilebar>
-<router-outlet></router-outlet>
+<sd-mobilebar [pageTitle]="pageTitle"></sd-mobilebar>
+<router-outlet (onComponentReady)="onComponentReady($event)"></router-outlet>
 
 <footer>
   <div class="ui container grid">

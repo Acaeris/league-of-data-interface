@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ProfileComponent } from './profile.component';
+import { SummonerComponent } from './summoner.component';
 
 @NgModule({
     imports: [
         RouterModule.forChild([
-            { path: 'profile', component: ProfileComponent }
+            { path: 'summoner', component: SummonerComponent }
         ])
     ],
     exports: [RouterModule]
 })
-export class ProfileRoutingModule { }
+export class SummonerRoutingModule { }

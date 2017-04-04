@@ -4,18 +4,18 @@ import { MockBackend } from '@angular/http/testing';
 
 import { Observable } from 'rxjs/Observable';
 
-import { ProfileService } from './profile.service';
-import { Profile } from '../../models/profile';
+import { SummonerService } from './summoner.service';
+import { Summoner } from '../../models/summoner';
 
 export function main() {
-    describe('Profile Service', () => {
-        let profileService: ProfileService;
+    describe('Summoner Service', () => {
+        let summonerService: SummonerService;
         let mockBackend: MockBackend;
 
         beforeEach(() => {
             TestBed.configureTestingModule({
                 providers: [
-                    ProfileService,
+                    SummonerService,
                     MockBackend,
                     BaseRequestOptions,
                     {
@@ -28,11 +28,11 @@ export function main() {
         });
 
         it('should return an Observable when called', async(() => {
-            expect(TestBed.get(ProfileService).get()).toEqual(jasmine.any(Observable));
+            expect(TestBed.get(SummonerService).get()).toEqual(jasmine.any(Observable));
         }));
 
         it('should resolve to a name when get called', async(() => {
-            let profileService = TestBed.get(ProfileService);
+            let summonerService = TestBed.get(SummonerService);
             let mockBackend = TestBed.get(MockBackend);
 
             mockBackend.connections.subscribe((c: any) => {
@@ -51,7 +51,7 @@ export function main() {
                 + '}' })));
             });
 
-            profileService.get().subscribe((data: Profile) => {
+            summonerService.get().subscribe((data: Summoner) => {
                 expect(data.name).toEqual('Acaeris');
             });
         }));

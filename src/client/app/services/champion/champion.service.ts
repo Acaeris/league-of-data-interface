@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { Profile } from '../../models/profile';
+import { Champion } from '../../models/champion';
 
 /**
- * This class provides the Profile service with methods to read profile data
+ * This class provides the Champion service with methods to read profile data
  */
 @Injectable()
-export class ProfileService {
+export class ChampionService {
     /**
      * Creates a new ProfileService with the injected Http.
      * @param {Http} http - The injected Http.
@@ -17,11 +17,11 @@ export class ProfileService {
 
     /**
      * Returns an Observable for the HTTP GET request for the JSON resource.
-     * @return {Profile} The Observable for the HTTP request.
+     * @return {Champion} The Observable for the HTTP request.
      */
-    get(): Observable<Profile> {
-        return this.http.get('assets/profile.json')
-            .map(res => <Profile>res.json())
+    get(): Observable<Champion> {
+        return this.http.get('assets/champion.json')
+            .map(res => <Champion>res.json())
             .catch(this.handleError);
     }
 

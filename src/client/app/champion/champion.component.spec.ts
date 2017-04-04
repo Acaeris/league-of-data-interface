@@ -4,17 +4,17 @@ import {
   TestBed
 } from '@angular/core/testing';
 
-import { AboutModule } from './about.module';
+import { ChampionModule } from './champion.module';
 
 export function main() {
-   describe('About component', () => {
+   describe('Champion component', () => {
     // Setting module for testing
     // Disable old forms
 
     beforeEach(() => {
       TestBed.configureTestingModule({
         declarations: [TestComponent],
-        imports: [AboutModule]
+        imports: [ChampionModule]
       });
     });
 
@@ -24,9 +24,9 @@ export function main() {
           .compileComponents()
           .then(() => {
             let fixture = TestBed.createComponent(TestComponent);
-            let aboutDOMEl = fixture.debugElement.children[0].nativeElement;
+            let championDOMEl = fixture.debugElement.children[0].nativeElement;
 
-              expect(aboutDOMEl.querySelectorAll('h2')[0].textContent).toEqual('Features');
+              expect(championDOMEl.querySelectorAll('h2')[0].textContent).toEqual('Features');
           });
         }));
     });
@@ -34,6 +34,6 @@ export function main() {
 
 @Component({
   selector: 'test-cmp',
-  template: '<sd-about></sd-about>'
+  template: '<sd-champion></sd-champion>'
 })
 class TestComponent {}

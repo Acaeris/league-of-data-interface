@@ -12,7 +12,13 @@ import './operators';
   styleUrls: ['app.component.css'],
 })
 export class AppComponent {
+  pageTitle: string = "League of Data";
+
   constructor() {
     console.log('Environment config', Config);
+  }
+
+  onComponentReady(title: string) {
+    this.pageTitle = title;
   }
 }

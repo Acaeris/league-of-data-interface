@@ -1,21 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { ProfileService } from '../services/profile/profile.service';
-import { Profile } from '../models/profile';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { SummonerService } from '../services/summoner/summoner.service';
+import { Summoner } from '../models/summoner';
 import { Tiers } from '../models/tiers.enum';
 
 /**
- * This class represents the lazy loaded ProfileComponent
+ * This class represents the lazy loaded SummonerComponent
  */
 @Component({
 	moduleId: module.id,
-	selector: 'sd-profile',
-	templateUrl: 'profile.component.html',
-	styleUrls: ['profile.component.css']
+	selector: 'sd-summoner',
+	templateUrl: 'summoner.component.html',
+	styleUrls: ['summoner.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class SummonerComponent implements OnInit {
+	@Output() onComponentReady = new EventEmitter<string>();
 	private chartData: Array<any>;
 	errorMessage: string;
-	profile: Profile;
+	summoner: Summoner;
 	region: string = "EUW";
 	Tiers: typeof Tiers = Tiers;
 	lineChartData: Array<any> = [
@@ -61,18 +62,19 @@ export class ProfileComponent implements OnInit {
 	lineChartType: string = 'line';
 
 	/**
-	 * Creates an instance of the ProfileComponent with the injected
-	 * ProfileService
+	 * Creates an instance of the SummonerComponent with the injected
+	 * SummonerService
 	 *
-	 * @param {ProfileService} profileService - The injected ProfileService
+	 * @param {SummonerService} summonerService - The injected SummonerService
 	 */
-	constructor(public profileService: ProfileService) { }
+	constructor(public summonerService: SummonerService) { }
 
 	/**
-	 * Get the profile data
+	 * Get the summoner data
 	 */
 	ngOnInit() {
-		this.getProfile();
+    this.onComponentReady.emit("Summoner Details");
+		this.getSummoner();
 		// give everything a chance to get loaded before starting the animation to reduce choppiness
 		setTimeout(() => {
 			this.generateData();
@@ -83,12 +85,12 @@ export class ProfileComponent implements OnInit {
 	}
 
 	/**
-	 * Handles the profileService observable
+	 * Handles the summonerService observable
 	 */
-	getProfile() {
-		this.profileService.get()
+	getSummoner() {
+		this.summonerService.get()
 			.subscribe(
-			data => this.profile = data,
+			data => this.summoner = data,
 			error => this.errorMessage = <any>error
 			);
 	}
