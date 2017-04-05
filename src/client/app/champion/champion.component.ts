@@ -7,7 +7,7 @@ import { Champion } from '../models/champion';
  */
 @Component({
   moduleId: module.id,
-  selector: 'sd-champion',
+  selector: 'champion-main',
   templateUrl: 'champion.component.html',
   styleUrls: ['champion.component.css']
 })

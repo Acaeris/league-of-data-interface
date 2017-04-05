@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MobilebarComponent } from './mobilebar/mobilebar.component';
+import { FooterComponent } from './footer/footer.component';
 
 import { SemanticSidebarDirective } from '../directives/suiSidebar.directive';
 
@@ -19,10 +20,11 @@ import { SemanticSidebarDirective } from '../directives/suiSidebar.directive';
       ToolbarComponent,
       NavbarComponent,
       MobilebarComponent,
+      FooterComponent,
       SemanticSidebarDirective
   ],
   exports: [ToolbarComponent, NavbarComponent, MobilebarComponent,
-    CommonModule, FormsModule, RouterModule]
+    FooterComponent, CommonModule, FormsModule, RouterModule]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {

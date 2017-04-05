@@ -1,28 +1,5 @@
-<sd-navbar></sd-navbar>
-<sd-toolbar></sd-toolbar>
-<sd-mobilebar [pageTitle]="pageTitle"></sd-mobilebar>
+<ui-navbar></ui-navbar>
+<ui-toolbar></ui-toolbar>
+<ui-mobilebar [pageTitle]="pageTitle"></ui-mobilebar>
 <router-outlet (onComponentReady)="onComponentReady($event)"></router-outlet>
-
-<footer>
-  <div class="ui container grid">
-    <div class="eight wide column">
-      <p>&copy; 2017 Black Knight. All Rights Reserved.</p>
-      <div class="ui inverted horizontal bulleted list">
-        <a class="item" href="#">Privacy</a>
-        <a class="item" href="#">Terms</a>
-        <a class="item" href="#">FAQ</a>
-      </div>
-    </div>
-    <div class="eight wide right aligned column">
-      <a class="ui facebook icon circular button">
-        <i class="facebook icon"></i>
-      </a>
-      <a class="ui twitter icon circular button">
-        <i class="twitter icon"></i>
-      </a>
-      <a class="ui google plus icon circular button">
-        <i class="google plus icon"></i>
-      </a>
-    </div>
-  </div>
-</footer>
+<ui-footer></ui-footer>

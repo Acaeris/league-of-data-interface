@@ -1,3 +1,8 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+@backgroundColor: lighten(@c-backgroundLight, 10%);
+@hoverBackgroundColor: lighten(@c-backgroundLight, 5%);
+@hoveredTextColor: rgba(255, 255, 255, 0.87);
+@textColor: rgba(255, 255, 255, 0.87);

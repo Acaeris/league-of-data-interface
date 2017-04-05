@@ -42,7 +42,8 @@ export function main() {
                   + '"tags": ['
                     + '"Mage",'
                     + '"Support"'
-                  + ']'
+                  + '],'
+                  + '"version": "7.3.6"'
                 + '}' })));
             });
 

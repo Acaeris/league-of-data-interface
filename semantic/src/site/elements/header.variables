@@ -1,3 +1,6 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+@attachedBackground: @c-backgroundLight;
+@textColor: @c-text;

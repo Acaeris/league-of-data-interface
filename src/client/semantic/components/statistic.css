@@ -106,7 +106,7 @@
   font-size: 4rem;
   font-weight: normal;
   line-height: 1em;
-  color: #1B1C1D;
+  color: rgba(255, 255, 255, 0.87);
   text-transform: uppercase;
   text-align: center;
 }
@@ -117,10 +117,10 @@
 
 .ui.statistics .statistic > .label,
 .ui.statistic > .label {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Forum', serif;
   font-size: 1em;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.87);
+  color: #BDA168;
   text-transform: uppercase;
   text-align: center;
 }

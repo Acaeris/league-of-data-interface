@@ -6,12 +6,33 @@
         <div class="ui left floated small image">
           <img src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/champion/{{champion.name}}.png" />
         </div>
-        <a class="header">{{champion.name}}</a>
+        <h2 class="header">{{champion.name}}</h2>
         <div class="meta">
+          <p class="subheader">{{champion.title}}</p>
           <div class="ui labels">
             <span class="ui label" *ngFor="let tag of champion.tags">{{tag}}</span>
           </div>
           <p class="right floated date">Version: {{champion.version}}</p>
+        </div>
+      </div>
+      <div class="ui segment">
+        <div class="ui mini four statistics">
+          <div class="statistic">
+            <span class="label">Win Rate</span>
+            <span class="value">51.6%</span>
+          </div>
+          <div class="statistic">
+            <span class="label">Popularity</span>
+            <span class="value">2.2%</span>
+          </div>
+          <div class="statistic">
+            <span class="label">Ban Rate</span>
+            <span class="value">3.7%</span>
+          </div>
+          <div class="statistic">
+            <span class="label">AVG Matches Played</span>
+            <span class="value">5.2</span>
+          </div>
         </div>
       </div>
     </div>

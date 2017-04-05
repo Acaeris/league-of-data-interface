@@ -1,70 +1,55 @@
 @import 'variables';
 @import 'mixins';
 
-@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i');
-
 @media (max-width: 768px) {
-  .ui {
-    &.desktop {
-      display: none !important;
-    }
-
-    &.container {
-      margin: 0 !important;
-    }
+  .ui.desktop {
+    display: none !important;
   }
 }
 @media (min-width: 769px) {
-  .ui {
-    &.mobile {
-      display: none !important;
-    }
+  .ui.mobile {
+    display: none !important;
   }
 }
 
 body {
-  font-family: 'Raleway',"Helvetica Neue",Arial,Helvetica,sans-serif;
+  font-family: $sans;
+  color: rgba(255, 255, 255, 0.87);
 }
 
 h1, h2, h3, h4, h5, h6 {
   &.ui.header{
-    font-family: 'Lora', serif;
+    font-family: $serif;
     font-weight: 400;
-    color: $c-textGold;
+    color: $c-text;
   }
 }
 
-body.pushable > .pusher {
-  background-color: $c-paper;
-}
-
-.details {
-  background-color: $c-p4;
-  color: $c-white;
-}
 
 .ui {
   &.label {
     &.bronze {
       @include linear-split($c-bronze, darken($c-bronze, 8%));
-      color: $c-white;
     }
 
     &.silver {
       @include linear-split($c-silver, darken($c-silver, 8%));
+      color: rgba(0, 0, 0, 0.6);
     }
 
     &.gold {
       @include linear-split($c-gold, darken($c-gold, 8%));
+      color: rgba(0, 0, 0, 0.6);
     }
 
     &.platinum {
       @include linear-split($c-platinum, darken($c-platinum, 8%));
+      color: rgba(0, 0, 0, 0.6);
     }
 
     &.diamond {
       @include linear-split($c-diamond, darken($c-diamond, 8%));
+      color: rgba(0, 0, 0, 0.6);
     }
   }
 }

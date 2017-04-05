@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
  */
 @Component({
   moduleId: module.id,
-  selector: 'sd-mobilebar',
+  selector: 'ui-mobilebar',
   templateUrl: 'mobilebar.component.html',
   styleUrls: ['mobilebar.component.css']
 })
