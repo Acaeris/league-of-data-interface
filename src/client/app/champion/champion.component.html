@@ -17,33 +17,58 @@
       </div>
       <div class="ui segment">
         <div class="ui mini four statistics">
-          <div class="statistic">
-            <span class="label">Win Rate</span>
-            <span class="value">51.6%</span>
-          </div>
-          <div class="statistic">
-            <span class="label">Popularity</span>
-            <span class="value">2.2%</span>
-          </div>
-          <div class="statistic">
-            <span class="label">Ban Rate</span>
-            <span class="value">3.7%</span>
-          </div>
-          <div class="statistic">
-            <span class="label">AVG Matches Played</span>
-            <span class="value">5.2</span>
-          </div>
+          <div ui-statistic *ngFor="let stat of champion.stats" [stat]="stat"></div>
         </div>
       </div>
     </div>
     <div class="ui top attached tabular small menu">
-      <a class="active item">Summary</a>
-      <a class="item">Abilities</a>
+      <a ui-tab class="active item" data-tab="summary">Summary</a>
+      <a ui-tab class="item" data-tab="abilities">Abilities</a>
     </div>
-    <div class="ui bottom attached segment">
+    <div class="ui bottom attached active tab segment" data-tab="summary">
       <div class="ui stackable grid">
-        <div class="twelve wide column">Stuff</div>
+        <div class="eleven wide column">
+          <h3 class="ui header">Combos</h3>
+          <div class="ui breadcrumb">
+            <div class="ui image">
+              <span class="ui bottom attached label">Q</span>
+              <img src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/spell/Disintegrate.png" />
+            </div>
+            <i class="gold right arrow icon divider"></i>
+            <div class="ui image">
+              <span class="ui bottom attached label">R</span>
+              <img src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/spell/InfernalGuardian.png" />
+            </div>
+            <i class="gold right arrow icon divider"></i>
+            <div class="ui image">
+              <span class="ui bottom attached label">W</span>
+              <img src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/spell/Incinerate.png" />
+            </div>
+          </div>
+        </div>
+        <div class="five wide column">
+          <h3 class="ui top attached header segment">Strength over Time</h3>
+          <table class="ui bottom attached definition table">
+            <tbody>
+              <tr>
+                <td>Early</td>
+                <td><span class="ui star rating" data-max-rating="5" data-rating="3"></span></td>
+              </tr>
+              <tr>
+                <td>Mid</td>
+                <td><span class="ui star rating" data-max-rating="5" data-rating="4"></span></td>
+              </tr>
+              <tr>
+                <td>Late</td>
+                <td><span class="ui star rating" data-max-rating="5" data-rating="4"></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
+    </div>
+    <div class="ui bottom attached tab segment" data-tab="abilities">
+      <h3 class="ui header">Abilities</h3>
     </div>
   </div>
 </section>

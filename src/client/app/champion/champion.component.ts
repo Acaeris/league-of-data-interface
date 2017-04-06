@@ -1,6 +1,7 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { ChampionService } from '../services/champion/champion.service';
 import { Champion } from '../models/champion';
+import { StatisticComponent } from '../shared/statistic/statistic.component';
 
 /**
  * This class represents the lazy loaded ChampionComponent.
@@ -12,7 +13,6 @@ import { Champion } from '../models/champion';
   styleUrls: ['champion.component.css']
 })
 export class ChampionComponent implements OnInit {
-  @Output() onComponentReady = new EventEmitter<string>();
   champion: Champion;
 	errorMessage: string;
 
@@ -29,7 +29,6 @@ export class ChampionComponent implements OnInit {
    */
   ngOnInit() {
     this.getChampion();
-    this.onComponentReady.emit("Champion Details");
   }
 
   /**

@@ -3,8 +3,13 @@
   "name": "Annie",
   "title": "The Dark Child",
   "tags": [
-    "Mage",
-    "Support"
+    "Mage"
+  ],
+  "stats": [
+    { "label": "Win Rate", "value": "51.6%" },
+    { "label": "Popularity", "value": "2.2%" },
+    { "label": "Ban Rate", "value": "3.7%" },
+    { "label": "AVG Matches Played", "value": "5.2" }
   ],
   "version": "7.3.6"
 }

@@ -10,10 +10,30 @@ import { HomeModule } from './home/home.module';
 import { SummonerModule } from './summoner/summoner.module';
 import { SharedModule } from './shared/shared.module';
 
+import { ToolbarComponent } from './shared/toolbar/toolbar.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { MobilebarComponent } from './shared/mobilebar/mobilebar.component';
+import { FooterComponent } from './shared/footer/footer.component';
+
+import { SemanticSidebarDirective } from './directives/suiSidebar.directive';
+
 @NgModule({
-  imports: [BrowserModule, HttpModule, AppRoutingModule, ChampionModule, HomeModule, SummonerModule, SharedModule.forRoot()],
+  imports: [
+    BrowserModule,
+    HttpModule,
+    AppRoutingModule,
+    ChampionModule,
+    HomeModule,
+    SummonerModule,
+    SharedModule.forRoot()
+  ],
   declarations: [
-      AppComponent
+      ToolbarComponent,
+      NavbarComponent,
+      MobilebarComponent,
+      FooterComponent,
+      AppComponent,
+      SemanticSidebarDirective
   ],
   providers: [{
     provide: APP_BASE_HREF,

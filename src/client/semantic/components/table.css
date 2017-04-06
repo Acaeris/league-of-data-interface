@@ -17,9 +17,9 @@
 /* Prototype */
 .ui.table {
   width: 100%;
-  background: #FFFFFF;
+  background: #010A13;
   margin: 1em 0em;
-  border: 1px solid rgba(34, 36, 38, 0.15);
+  border: 1px solid #1A2428;
   box-shadow: none;
   border-radius: 0.28571429rem;
   text-align: left;
@@ -53,7 +53,7 @@
 }
 .ui.table thead th {
   cursor: auto;
-  background: #F9FAFB;
+  background: #0B131B;
   text-align: inherit;
   color: rgba(255, 255, 255, 0.87);
   padding: 0.92857143em 0.78571429em;
@@ -83,7 +83,7 @@
 }
 .ui.table tfoot th {
   cursor: auto;
-  border-top: 1px solid rgba(34, 36, 38, 0.15);
+  border-top: 1px solid #1A2428;
   background: #F9FAFB;
   text-align: inherit;
   color: rgba(255, 255, 255, 0.87);
@@ -215,8 +215,8 @@
   border-right: none;
 }
 .ui.structured.sortable.table thead th {
-  border-left: 1px solid rgba(34, 36, 38, 0.15);
-  border-right: 1px solid rgba(34, 36, 38, 0.15);
+  border-left: 1px solid #1A2428;
+  border-right: 1px solid #1A2428;
 }
 .ui.structured.basic.table th {
   border-left: none;
@@ -258,7 +258,7 @@
 /* Highlight Defining Column */
 .ui.definition.table tr td:first-child:not(.ignored),
 .ui.definition.table tr td.definition {
-  background: rgba(0, 0, 0, 0.03);
+  background: #0B131B;
   font-weight: bold;
   color: #BDA168;
   text-transform: '';
@@ -271,13 +271,13 @@
 
 /* Fix 2nd Column */
 .ui.definition.table thead:not(.full-width) th:nth-child(2) {
-  border-left: 1px solid rgba(34, 36, 38, 0.15);
+  border-left: 1px solid #1A2428;
 }
 .ui.definition.table tfoot:not(.full-width) th:nth-child(2) {
-  border-left: 1px solid rgba(34, 36, 38, 0.15);
+  border-left: 1px solid #1A2428;
 }
 .ui.definition.table td:nth-child(2) {
-  border-left: 1px solid rgba(34, 36, 38, 0.15);
+  border-left: 1px solid #1A2428;
 }
 
 
@@ -860,7 +860,7 @@
 .ui.sortable.table thead th {
   cursor: pointer;
   white-space: nowrap;
-  border-left: 1px solid rgba(34, 36, 38, 0.15);
+  border-left: 1px solid #1A2428;
   color: rgba(255, 255, 255, 0.87);
 }
 .ui.sortable.table thead th:first-child {
@@ -984,7 +984,7 @@
 
 .ui.basic.table {
   background: transparent;
-  border: 1px solid rgba(34, 36, 38, 0.15);
+  border: 1px solid #1A2428;
   box-shadow: none;
 }
 .ui.basic.table thead,

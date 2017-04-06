@@ -55,7 +55,7 @@
 /* Inactive Icon */
 .ui.rating .icon {
   background: transparent;
-  color: rgba(0, 0, 0, 0.15);
+  color: #0B131B;
 }
 
 /* Active Icon */
@@ -81,23 +81,23 @@
   width: 1.25em;
   height: auto;
   background: transparent;
-  color: rgba(0, 0, 0, 0.15);
+  color: #0B131B;
   text-shadow: none;
 }
 
 /* Active Star */
 .ui.star.rating .active.icon {
   background: transparent !important;
-  color: #FFE623 !important;
-  text-shadow: 0px -1px 0px #DDC507, -1px 0px 0px #DDC507, 0px 1px 0px #DDC507, 1px 0px 0px #DDC507 !important;
+  color: #BDA168 !important;
+  text-shadow: 0px -1px 0px #6D5326, -1px 0px 0px #6D5326, 0px 1px 0px #6D5326, 1px 0px 0px #6D5326 !important;
 }
 
 /* Selected Star */
 .ui.star.rating .icon.selected,
 .ui.star.rating .icon.selected.active {
   background: transparent !important;
-  color: #FFCC00 !important;
-  text-shadow: 0px -1px 0px #E6A200, -1px 0px 0px #E6A200, 0px 1px 0px #E6A200, 1px 0px 0px #E6A200 !important;
+  color: #b59656 !important;
+  text-shadow: 0px -1px 0px #5a451f, -1px 0px 0px #5a451f, 0px 1px 0px #5a451f, 1px 0px 0px #5a451f !important;
 }
 
 /*-------------------
@@ -108,7 +108,7 @@
   width: 1.4em;
   height: auto;
   background: transparent;
-  color: rgba(0, 0, 0, 0.15);
+  color: #0B131B;
   text-shadow: none !important;
 }
 

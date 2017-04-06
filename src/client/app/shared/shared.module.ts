@@ -3,28 +3,29 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { ToolbarComponent } from './toolbar/toolbar.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { MobilebarComponent } from './mobilebar/mobilebar.component';
-import { FooterComponent } from './footer/footer.component';
+import { StatisticComponent } from '../shared/statistic/statistic.component';
 
-import { SemanticSidebarDirective } from '../directives/suiSidebar.directive';
+import { SemanticDropdownDirective } from '../directives/semantic-dropdown.directive';
+import { SemanticTabDirective } from '../directives/semantic-tab.directive';
 
 /**
  * Do not specify providers for modules that might be imported by a lazy loaded module.
  */
-
 @NgModule({
   imports: [CommonModule, RouterModule],
   declarations: [
-      ToolbarComponent,
-      NavbarComponent,
-      MobilebarComponent,
-      FooterComponent,
-      SemanticSidebarDirective
+      StatisticComponent,
+      SemanticDropdownDirective,
+      SemanticTabDirective
   ],
-  exports: [ToolbarComponent, NavbarComponent, MobilebarComponent,
-    FooterComponent, CommonModule, FormsModule, RouterModule]
+  exports: [
+    StatisticComponent,
+    SemanticDropdownDirective,
+    SemanticTabDirective,
+    CommonModule,
+    FormsModule,
+    RouterModule
+  ]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {
