@@ -6,7 +6,7 @@ import { Stat } from  '../../models/stat';
  */
 @Component({
   moduleId: module.id,
-  selector: '[ui-statistic]',
+  selector: 'ui-statistic',
   templateUrl: 'statistic.component.html',
   styleUrls: ['statistic.component.css']
 })
@@ -17,6 +17,5 @@ export class StatisticComponent implements OnInit {
 
   ngOnInit() {
     $(this.el.nativeElement).addClass('statistic');
-    console.log(this.stat);
   }
 }

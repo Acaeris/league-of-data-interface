@@ -25,8 +25,26 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-i.icon.gold {
+.ui.breadcrumb .gold.divider {
   color: $c-text !important;
+}
+
+.ui.custom.rating {
+  .active.icon {
+    &::before {
+      font-family: Icons;
+      content: "\f04d";
+      color: $c-text;
+      text-shadow: 0 -1px 0 $c-borderGold, -1px 0 0 $c-borderGold, 0 1px 0 $c-borderGold, 1px 0 0 $c-borderGold;
+    }
+  }
+  .icon {
+    &::before {
+      font-family: Icons;
+      content: "\f04d";
+      color: lighten($c-backgroundLight, 5%);
+    }
+  }
 }
 
 .ui {

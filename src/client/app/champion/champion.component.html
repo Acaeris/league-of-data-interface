@@ -1,72 +1,11 @@
 <section class="champion">
   <div class="ui container">
-    <div class="ui fluid card" *ngIf="champion">
-      <div class="content">
-        <i class="right floated star icon"></i>
-        <div class="ui left floated small image">
-          <img src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/champion/{{champion.name}}.png" />
-        </div>
-        <h2 class="header">{{champion.name}}</h2>
-        <div class="meta">
-          <p class="subheader">{{champion.title}}</p>
-          <div class="ui labels">
-            <span class="ui label" *ngFor="let tag of champion.tags">{{tag}}</span>
-          </div>
-          <p class="right floated date">Version: {{champion.version}}</p>
-        </div>
-      </div>
-      <div class="ui segment">
-        <div class="ui mini four statistics">
-          <div ui-statistic *ngFor="let stat of champion.stats" [stat]="stat"></div>
-        </div>
-      </div>
-    </div>
+    <champion-card class="ui fluid card" *ngIf="champion" [champion]="champion"></champion-card>
     <div class="ui top attached tabular small menu">
       <a ui-tab class="active item" data-tab="summary">Summary</a>
       <a ui-tab class="item" data-tab="abilities">Abilities</a>
     </div>
-    <div class="ui bottom attached active tab segment" data-tab="summary">
-      <div class="ui stackable grid">
-        <div class="eleven wide column">
-          <h3 class="ui header">Combos</h3>
-          <div class="ui breadcrumb">
-            <div class="ui image">
-              <span class="ui bottom attached label">Q</span>
-              <img src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/spell/Disintegrate.png" />
-            </div>
-            <i class="gold right arrow icon divider"></i>
-            <div class="ui image">
-              <span class="ui bottom attached label">R</span>
-              <img src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/spell/InfernalGuardian.png" />
-            </div>
-            <i class="gold right arrow icon divider"></i>
-            <div class="ui image">
-              <span class="ui bottom attached label">W</span>
-              <img src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/spell/Incinerate.png" />
-            </div>
-          </div>
-        </div>
-        <div class="five wide column">
-          <h3 class="ui top attached header segment">Strength over Time</h3>
-          <table class="ui bottom attached definition table">
-            <tbody>
-              <tr>
-                <td>Early</td>
-                <td><span class="ui star rating" data-max-rating="5" data-rating="3"></span></td>
-              </tr>
-              <tr>
-                <td>Mid</td>
-                <td><span class="ui star rating" data-max-rating="5" data-rating="4"></span></td>
-              </tr>
-              <tr>
-                <td>Late</td>
-                <td><span class="ui star rating" data-max-rating="5" data-rating="4"></span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+    <champion-summary *ngIf="champion" [champion]="champion" class="active" data-tab="summary"></champion-summary>
     <div class="ui bottom attached tab segment" data-tab="abilities">
       <h3 class="ui header">Abilities</h3>
     </div>

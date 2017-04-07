@@ -1,7 +1,7 @@
 @import '../../scss/variables';
 
 .champion {
-  background: url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Annie_0.jpg') no-repeat center top fixed;
+  background: transparent no-repeat center top fixed;
 
   .container {
     margin-top: 2.8em !important;
@@ -12,16 +12,5 @@
     font-weight: 700;
     font-size: 1.1em;
     margin-bottom: 1em;
-  }
-}
-
-.ui.card {
-  h2 {
-    margin-bottom: 0.1em;
-  }
-
-  img {
-    padding: 1px;
-    border: 1px solid $c-borderGold;
   }
 }

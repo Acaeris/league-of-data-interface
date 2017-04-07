@@ -8,7 +8,7 @@ import { Tiers } from '../models/tiers.enum';
  */
 @Component({
 	moduleId: module.id,
-	selector: 'sd-summoner',
+	selector: 'summoner-main',
 	templateUrl: 'summoner.component.html',
 	styleUrls: ['summoner.component.css']
 })

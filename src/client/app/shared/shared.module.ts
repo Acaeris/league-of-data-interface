@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { StatisticComponent } from '../shared/statistic/statistic.component';
+import { StatisticComponent } from './statistic/statistic.component';
+import { SpellComponent } from './spell/spell.component';
 
 import { SemanticDropdownDirective } from '../directives/semantic-dropdown.directive';
 import { SemanticTabDirective } from '../directives/semantic-tab.directive';
@@ -15,11 +16,13 @@ import { SemanticTabDirective } from '../directives/semantic-tab.directive';
   imports: [CommonModule, RouterModule],
   declarations: [
       StatisticComponent,
+      SpellComponent,
       SemanticDropdownDirective,
       SemanticTabDirective
   ],
   exports: [
     StatisticComponent,
+    SpellComponent,
     SemanticDropdownDirective,
     SemanticTabDirective,
     CommonModule,

@@ -3,7 +3,7 @@
     <div class="ui fluid profile card" *ngIf="summoner">
       <div class="content">
         <i class="right floated star icon"></i>
-        <div class="ui left floated small image">
+        <div class="ui left floated image">
           <span class="ui left mini ribbon label">{{summoner.level}}</span>
           <img src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/profileicon/{{summoner.profileIconId}}.png" />
         </div>
@@ -65,7 +65,7 @@
           </div>
         </div>
         <div class="four wide center aligned column">
-          <div ui-statistic label="Current Rank" value="Bronze" class="ui mini"></div>
+          <ui-statistic [stat]="{'label':'Current Rank','value':'Bronze'}" class="ui mini"></ui-statistic>
         </div>
       </div>
     </div>
