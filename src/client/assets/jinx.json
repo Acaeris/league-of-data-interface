@@ -1,0 +1,30 @@
+{
+  "id": 1,
+  "name": "Jinx",
+  "title": "The Loose Cannon",
+  "tags": [
+    "Marksman"
+  ],
+  "stats": [
+    { "label": "Win Rate", "value": "50.4%" },
+    { "label": "Popularity", "value": "4.0%" },
+    { "label": "Ban Rate", "value": "1.3%" },
+    { "label": "AVG Matches Played", "value": "8.8" }
+  ],
+  "rating": {
+    "early": 2,
+    "mid": 3,
+    "late": 5
+  },
+  "combos": [
+    {
+      "title": "Test",
+      "spells": [
+        { "id": 1, "name": "JinxW", "key": "W" },
+        { "id": 2, "name": "JinxE", "key": "E" },
+        { "id": 3, "name": "JinxR", "key": "R"}
+      ]
+    }
+  ],
+  "version": "7.3.6"
+}

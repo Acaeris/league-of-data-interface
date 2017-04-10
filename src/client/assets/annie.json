@@ -1,0 +1,47 @@
+{
+  "id": 1,
+  "name": "Annie",
+  "title": "The Dark Child",
+  "tags": [
+    "Mage"
+  ],
+  "stats": [
+    { "label": "Win Rate", "value": "51.6%" },
+    { "label": "Popularity", "value": "2.2%" },
+    { "label": "Ban Rate", "value": "3.7%" },
+    { "label": "AVG Matches Played", "value": "5.2" }
+  ],
+  "rating": {
+    "early": 3,
+    "mid": 4,
+    "late": 4
+  },
+  "combos": [
+    {
+      "title": "Solo",
+      "spells": [
+        { "id": 1, "name": "Disintegrate", "key": "Q" },
+        { "id": 2, "name": "InfernalGuardian", "key": "R" },
+        { "id": 3, "name": "Incinerate", "key": "W"},
+        { "id": 1, "name": "Disintegrate", "key": "Q" }
+      ]
+    }, {
+      "title": "Teamfight 1",
+      "spells": [
+        { "id": 2, "name": "InfernalGuardian", "key": "R" },
+        { "id": 3, "name": "Incinerate", "key": "W"},
+        { "id": 1, "name": "Disintegrate", "key": "Q" }
+      ]
+    }, {
+      "title": "Teamfight 2",
+      "spells": [
+        { "id": 4, "name": "InfernalGuardian", "key": "R" },
+        { "id": 1, "name": "Disintegrate", "key": "Q" },
+        { "id": 2, "name": "Incinerate", "key": "W"},
+        { "id": 3, "name": "MoltenShield", "key": "E"},
+        { "id": 1, "name": "Disintegrate", "key": "Q"}
+      ]
+    }
+  ],
+  "version": "7.3.6"
+}

@@ -1,0 +1,39 @@
+{
+  "id": 1,
+  "name": "Vi",
+  "title": "The Loose Cannon",
+  "tags": [
+    "Marksman"
+  ],
+  "stats": [
+    { "label": "Win Rate", "value": "50.4%" },
+    { "label": "Popularity", "value": "4.0%" },
+    { "label": "Ban Rate", "value": "1.3%" },
+    { "label": "AVG Matches Played", "value": "8.8" }
+  ],
+  "rating": {
+    "early": 4,
+    "mid": 5,
+    "late": 3
+  },
+  "combos": [
+    {
+      "title": "Test 1",
+      "spells": [
+        { "id": 1, "name": "ViQ", "key": "Q" },
+        { "id": 2, "name": "ViE", "key": "E" },
+        { "id": 3, "name": "ViR", "key": "R"},
+        { "id": 4, "name": "ViE", "key": "E"}
+      ]
+    }, {
+      "title": "Test 2",
+      "spells": [
+        { "id": 1, "name": "ViR", "key": "Q" },
+        { "id": 2, "name": "ViE", "key": "E" },
+        { "id": 3, "name": "ViQ", "key": "R"},
+        { "id": 4, "name": "ViE", "key": "E"}
+      ]
+    }
+  ],
+  "version": "7.3.6"
+}

@@ -3,4 +3,5 @@
 *******************************/
 
 @attachedBackground: @c-backgroundLight;
+@blockBackground: @c-backgroundLight;
 @textColor: @c-text;

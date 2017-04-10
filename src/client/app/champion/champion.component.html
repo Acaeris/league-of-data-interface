@@ -1,6 +1,9 @@
 <section class="champion">
   <div class="ui container">
     <champion-card class="ui fluid card" *ngIf="champion" [champion]="champion"></champion-card>
+    <a class="ui label" [routerLink]="['/champion', 'annie']" [routerLinkActive]="['gold']" [routerLinkActiveOptions]="{exact:true}">Annie</a>
+    <a class="ui label" [routerLink]="['/champion', 'jinx']" [routerLinkActive]="['gold']" [routerLinkActiveOptions]="{exact:true}">Jinx</a>
+    <a class="ui label" [routerLink]="['/champion', 'vi']" [routerLinkActive]="['gold']" [routerLinkActiveOptions]="{exact:true}">Vi</a>
     <div class="ui top attached tabular small menu">
       <a ui-tab class="active item" data-tab="summary">Summary</a>
       <a ui-tab class="item" data-tab="abilities">Abilities</a>
