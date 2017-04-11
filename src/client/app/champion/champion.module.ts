@@ -4,6 +4,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ChampionComponent } from './champion.component';
 import { ChampionCardComponent } from './card/champion-card.component';
 import { ChampionSummaryComponent } from './summary/champion-summary.component';
+import { ChampionAbilitiesComponent } from './abilities/champion-abilities.component';
 import { ChampionRoutingModule } from './champion-routing.module';
 import { ChampionService } from '../services/champion/champion.service';
 import { SemanticRatingDirective } from '../directives/suiRating.directive';
@@ -14,12 +15,14 @@ import { SemanticRatingDirective } from '../directives/suiRating.directive';
     ChampionComponent,
     ChampionCardComponent,
     ChampionSummaryComponent,
+    ChampionAbilitiesComponent,
     SemanticRatingDirective
   ],
   exports: [
     ChampionComponent,
     ChampionCardComponent,
-    ChampionSummaryComponent
+    ChampionSummaryComponent,
+    ChampionAbilitiesComponent
   ],
   providers: [ChampionService]
 })

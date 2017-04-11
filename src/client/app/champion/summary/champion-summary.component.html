@@ -1,12 +1,14 @@
 <div class="ui stackable grid">
   <div class="eleven wide column">
     <h3 class="ui header">Combos</h3>
-    <div class="ui breadcrumb" *ngFor="let combo of champion.combos">
-      <h5 class="ui block header">{{combo.title}}</h5>
-      <span *ngFor="let spell of combo.spells; let isLast=last">
-        <ui-spell key="{{spell.key}}" name="{{spell.name}}"></ui-spell>
-        <i class="gold right arrow icon divider" *ngIf="!isLast"></i>
-      </span>
+    <div class="ui basic segment" *ngFor="let combo of champion.combos">
+      <div class="ui breadcrumb">
+        <h5 class="ui block header">{{combo.title}}</h5>
+        <span *ngFor="let spell of combo.spells; let isLast=last">
+          <ui-spell type="spell" key="{{spell.key}}" name="{{spell.name}}"></ui-spell>
+          <i class="gold right arrow icon divider" *ngIf="!isLast"></i>
+        </span>
+      </div>
     </div>
   </div>
   <div class="five wide column">
@@ -15,15 +17,15 @@
       <tbody>
         <tr>
           <td>Early</td>
-          <td><span class="ui custom rating" data-max-rating="5" attr.data-rating="{{champion.rating.early}}"></span></td>
+          <td><span class="ui custom rating {{champion.name | lowercase}}" data-max-rating="5" attr.data-rating="{{champion.rating.early}}"></span></td>
         </tr>
         <tr>
           <td>Mid</td>
-          <td><span class="ui custom rating" data-max-rating="5" attr.data-rating="{{champion.rating.mid}}"></span></td>
+          <td><span class="ui custom rating {{champion.name | lowercase}}" data-max-rating="5" attr.data-rating="{{champion.rating.mid}}"></span></td>
         </tr>
         <tr>
           <td>Late</td>
-          <td><span class="ui custom rating" data-max-rating="5" attr.data-rating="{{champion.rating.late}}"></span></td>
+          <td><span class="ui custom rating {{champion.name | lowercase}}" data-max-rating="5" attr.data-rating="{{champion.rating.late}}"></span></td>
         </tr>
       </tbody>
     </table>

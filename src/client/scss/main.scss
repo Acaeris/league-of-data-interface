@@ -14,7 +14,7 @@
 
 body {
   font-family: $sans;
-  color: rgba(255, 255, 255, 0.87);
+  color: $c-white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,6 +45,15 @@ h1, h2, h3, h4, h5, h6 {
       color: lighten($c-backgroundLight, 5%);
     }
   }
+  /* Hmm... Maybe, maybe not
+  &.annie .active.icon::before {
+    color: #D3402A;
+    text-shadow: 0 -1px 0 darken(#D3402A, 10%), -1px 0 0 darken(#D3402A, 10%), 0 1px 0 darken(#D3402A, 10%), 1px 0 0 darken(#D3402A, 10%);
+  }
+  &.jinx .active.icon::before {
+    color: #D9507E;
+    text-shadow: 0 -1px 0 darken(#D9507E, 10%), -1px 0 0 darken(#D9507E, 10%), 0 1px 0 darken(#D9507E, 10%), 1px 0 0 darken(#D9507E, 10%);
+  }*/
 }
 
 .ui {

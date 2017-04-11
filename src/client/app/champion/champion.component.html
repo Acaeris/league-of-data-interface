@@ -5,12 +5,10 @@
     <a class="ui label" [routerLink]="['/champion', 'jinx']" [routerLinkActive]="['gold']" [routerLinkActiveOptions]="{exact:true}">Jinx</a>
     <a class="ui label" [routerLink]="['/champion', 'vi']" [routerLinkActive]="['gold']" [routerLinkActiveOptions]="{exact:true}">Vi</a>
     <div class="ui top attached tabular small menu">
-      <a ui-tab class="active item" data-tab="summary">Summary</a>
-      <a ui-tab class="item" data-tab="abilities">Abilities</a>
+      <a class="active item" data-tab="summary">Summary</a>
+      <a class="item" data-tab="abilities">Abilities</a>
     </div>
     <champion-summary *ngIf="champion" [champion]="champion" class="active" data-tab="summary"></champion-summary>
-    <div class="ui bottom attached tab segment" data-tab="abilities">
-      <h3 class="ui header">Abilities</h3>
-    </div>
+    <champion-abilities *ngIf="champion" [champion]="champion" data-tab="abilities"></champion-abilities>
   </div>
 </section>

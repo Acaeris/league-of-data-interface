@@ -7,7 +7,6 @@ import { StatisticComponent } from './statistic/statistic.component';
 import { SpellComponent } from './spell/spell.component';
 
 import { SemanticDropdownDirective } from '../directives/semantic-dropdown.directive';
-import { SemanticTabDirective } from '../directives/semantic-tab.directive';
 
 /**
  * Do not specify providers for modules that might be imported by a lazy loaded module.
@@ -17,14 +16,12 @@ import { SemanticTabDirective } from '../directives/semantic-tab.directive';
   declarations: [
       StatisticComponent,
       SpellComponent,
-      SemanticDropdownDirective,
-      SemanticTabDirective
+      SemanticDropdownDirective
   ],
   exports: [
     StatisticComponent,
     SpellComponent,
     SemanticDropdownDirective,
-    SemanticTabDirective,
     CommonModule,
     FormsModule,
     RouterModule

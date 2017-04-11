@@ -12,6 +12,7 @@ import { Component, ElementRef, Input, OnInit } from '@angular/core';
 export class SpellComponent implements OnInit {
   @Input() key: string;
   @Input() name: string;
+  @Input() type: string;
 
   constructor(private el: ElementRef) {}
 

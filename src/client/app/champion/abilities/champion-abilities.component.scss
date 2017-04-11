@@ -1,0 +1,23 @@
+@import '../../../scss/variables';
+
+.spell {
+  .name {
+    font-weight: bold;
+    color: $c-text;
+  }
+
+  .variable {
+    font-weight: bold;
+    color: $c-offWhite;
+  }
+
+  .colorFF8C00 {
+    font-weight: bold;
+    color: #FF8C00;
+  }
+
+  .color99FF99 {
+    font-weight: bold;
+    color: #99FF99;
+  }
+}
