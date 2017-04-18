@@ -16,6 +16,71 @@
     "mid": 4,
     "late": 4
   },
+  "passive": {
+    "id": 1,
+    "name": "Pyromania",
+    "key": "passive",
+    "file": "Annie_Passive",
+    "description": "After casting 4 spells, Annie's next offensive spell will stun the target for a short duration."
+  },
+  "spells": [
+    {
+      "id": 1,
+      "name": "Disintegrate",
+      "key": "Q",
+      "file": "Disintegrate",
+      "description": "Annie hurls a Mana infused fireball, dealing damage and refunding the Mana cost if it destroys the target.",
+      "tooltip": "Deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage. Mana cost and half the cooldown are refunded if Disintegrate kills the target.",
+      "cooldown": [4, 4, 4, 4, 4],
+      "range": [625, 625, 625, 625, 625],
+      "resource": {
+        "name": "Mana",
+        "values": [60, 65, 70, 75, 80]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Incinerate",
+      "key": "W",
+      "file": "Incinerate",
+      "description": "Annie casts a blazing cone of fire, dealing damage to all enemies in the area.",
+      "tooltip": "Casts a cone of fire dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to all enemies in the area.",
+      "cooldown": [8, 8, 8, 8, 8],
+      "range": [600, 600, 600, 600, 600],
+      "resource": {
+        "name": "Mana",
+        "values": [70, 80, 90, 100, 110]
+      }
+    },
+    {
+      "id": 3,
+      "name": "Molten Shield",
+      "key": "E",
+      "file": "MoltenShield",
+      "description": "Grants Annie and Tibbers increased percentage Damage Resist and damages enemies who attack with basic attacks.",
+      "tooltip": "Annie grants herself and Tibbers {{ e1 }}% damage reduction for {{ e3 }} seconds.<br><br>While the shield is active, enemies who basic attack it take {{ e2 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage.",
+      "cooldown": [10, 10, 10, 10, 10],
+      "range": [0, 0, 0, 0, 0],
+      "resource": {
+        "name": "Mana",
+        "values": [20, 20, 20, 20, 20]
+      }
+    },
+    {
+      "id": 4,
+      "name": "Summon: Tibbers",
+      "key": "R",
+      "file": "InfernalGuardian",
+      "description": "Annie wills her bear Tibbers to life, dealing damage to units in the area. Tibbers can attack and also burns enemies that stand near him.",
+      "tooltip": "Summons Tibbers, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to enemies in the target area. For the next 45 seconds, Tibbers burns nearby enemies for {{ e2 }} <span class=\"color99FF99\">(+{{ a2 }})</span> per second and attacks for {{ e3 }} <span class=\"color99FF99\">(+{{ f1 }})</span> as magic damage. Annie can control Tibbers by reactivating this ability.<br><br>Tibbers <span class=\"colorFFEB7F\">Enrages</span> when: summoned; Annie uses Pyromania on an enemy Champion; and when Annie dies.<br><br><span class=\"colorFFEB7F\">Enrages</span>: Tibbers gains 275% Attack Speed and 100% Movement Speed, decaying over 3 seconds.",
+      "cooldown": [120, 100, 80],
+      "range": [600, 600, 600],
+      "resource": {
+        "name": "Mana",
+        "values": [100, 100, 100]
+      }
+    }
+  ],
   "combos": [
     {
       "title": "Solo",

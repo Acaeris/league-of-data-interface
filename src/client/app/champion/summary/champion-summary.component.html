@@ -5,7 +5,7 @@
       <div class="ui breadcrumb">
         <h5 class="ui block header">{{combo.title}}</h5>
         <span *ngFor="let spell of combo.spells; let isLast=last">
-          <ui-spell type="spell" key="{{spell.key}}" name="{{spell.name}}"></ui-spell>
+          <ui-spell-icon type="spell" key="{{spell.key}}" name="{{spell.name}}"></ui-spell-icon>
           <i class="gold right arrow icon divider" *ngIf="!isLast"></i>
         </span>
       </div>

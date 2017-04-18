@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { StatisticComponent } from './statistic/statistic.component';
 import { SpellComponent } from './spell/spell.component';
+import { SpellIconComponent } from './spell-icon/spell-icon.component';
 
 import { SemanticDropdownDirective } from '../directives/semantic-dropdown.directive';
 
@@ -12,15 +13,17 @@ import { SemanticDropdownDirective } from '../directives/semantic-dropdown.direc
  * Do not specify providers for modules that might be imported by a lazy loaded module.
  */
 @NgModule({
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, FormsModule],
   declarations: [
       StatisticComponent,
       SpellComponent,
+      SpellIconComponent,
       SemanticDropdownDirective
   ],
   exports: [
     StatisticComponent,
     SpellComponent,
+    SpellIconComponent,
     SemanticDropdownDirective,
     CommonModule,
     FormsModule,

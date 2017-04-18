@@ -16,6 +16,60 @@
     "mid": 3,
     "late": 5
   },
+  "passive": {
+    "id": 1,
+    "name": "Get Excited!",
+    "key": "passive",
+    "file": "Jinx_Passive",
+    "description": "Jinx receives massively increased Movement Speed and stacking Attack Speed whenever she damages an enemy champion, tower, or inhibitor that is then killed or destroyed within 3 seconds.",
+    "tooltip": ""
+  },
+  "spells": [
+    {
+      "id": 1,
+      "name": "Switcheroo!",
+      "key": "Q",
+      "file": "JinxQ",
+      "description": "Jinx modifies her basic attacks by swapping between Pow-Pow, her minigun and Fishbones, her rocket launcher. Attacks with Pow-Pow grant Attack Speed, while attacks with Fishbones deal area of effect damage, gain increased range, and drain Mana.",
+      "tooltip": "Jinx swaps weapons.<br><br><span class=\"colorFF9900\">Fishbones, the Rocket Launcher:</span> Basic attacks deal 110% Damage to the target and nearby enemies, gain {{ e3 }} range, drain Mana, and scale {{ e5 }}% less with bonus Attack Speed.<br><br><span class=\"colorFF9900\">Pow-Pow, the Minigun:</span> Basic attacks grant bonus Attack Speed for 2.5 seconds. This effect stacks up to 3 times for a total bonus of <span class=\"colorFFFFFF\">{{ f4 }}%</span> (bonus scales with spell rank and Jinx's level). Stacks fall off one at a time and only benefit Jinx's first attack after switching to Rocket Launcher.",
+      "cooldown": "1",
+      "range": 600,
+      "resource": "20 mana per rocket"
+    },
+    {
+      "id": 2,
+      "name": "Zap!",
+      "key": "W",
+      "file": "JinxW",
+      "description": "Jinx uses Zapper, her shock pistol, to fire a blast that deals damage to the first enemy hit, slowing and revealing it.",
+      "tooltip": "Jinx fires a shock blast that deals {{ e1 }} <span class=\"colorFF8C00\">(+{{ a1 }})</span> Physical Damage to the first enemy hit, revealing it and slowing it by {{ e2 }}% for 2 seconds.",
+      "cooldown": "10/9/8/7/6",
+      "range": 1450,
+      "resource": "50/60/70/80/90 Mana"
+    },
+    {
+      "id": 3,
+      "name": "Flame Chompers!",
+      "key": "E",
+      "file": "JinxE",
+      "description": "Jinx throws out a line of snare grenades that explode after 5 seconds, lighting enemies on fire. Flame Chompers will bite enemy champions who walk over them, rooting them in place.",
+      "tooltip": "Jinx tosses out 3 chompers that, once armed, explode on contact with enemy champions, rooting the target for 1.5 seconds and dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage over 1.5 seconds to nearby enemies. Chompers last for 5 seconds.",
+      "cooldown": "24/22/20/18/16",
+      "range": 900,
+      "resource": "70 Mana"
+    },
+    {
+      "id": 4,
+      "name": "Super Mega Death Rocket!",
+      "key": "R",
+      "file": "JinxR",
+      "description": "Jinx fires a super rocket across the map that gains damage as it travels. The rocket will explode upon colliding with an enemy champion, dealing damage to it and surrounding enemies based on their missing Health.",
+      "tooltip": "Jinx fires a rocket that gains damage over the first second it travels. It explodes on the first enemy champion hit, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ a1 }})</span> to {{ e2 }} <span class=\"colorFF8C00\">(+{{ a2 }})</span> Physical Damage plus {{ e3 }}% of the target's missing Health. Nearby enemies take 80% Damage.",
+      "cooldown": "90/75/60",
+      "range": 25000,
+      "resource": "100 Mana"
+    }
+  ],
   "combos": [
     {
       "title": "Test",

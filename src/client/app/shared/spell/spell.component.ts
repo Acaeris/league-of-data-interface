@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { Spell } from '../../models/spell';
 
 /**
  * This class represents a Spell icon component
@@ -10,13 +11,18 @@ import { Component, ElementRef, Input, OnInit } from '@angular/core';
   styleUrls: ['spell.component.css']
 })
 export class SpellComponent implements OnInit {
-  @Input() key: string;
-  @Input() name: string;
-  @Input() type: string;
+  @Input() spell: Spell;
 
-  constructor(private el: ElementRef) {}
+  level: number = 1;
+
+  constructor(private el: ElementRef) {
+  }
 
   ngOnInit() {
-    $(this.el.nativeElement).addClass('ui image');
+  }
+
+  update(level: number) {
+    this.level = level;
+    console.log(this.level);
   }
 }

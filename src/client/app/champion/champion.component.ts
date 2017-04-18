@@ -40,7 +40,6 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
    */
   ngAfterViewChecked() {
     $('.ui.rating').each(function (i: number, e) {
-      console.log(e);
       $(e).rating('set rating', $(e).attr("data-rating"))
     });
     $('.ui.tabular.menu .item').each(function (i: number, e) {
