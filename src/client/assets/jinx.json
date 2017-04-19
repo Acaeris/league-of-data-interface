@@ -30,10 +30,13 @@
       "name": "Switcheroo!",
       "key": "Q",
       "file": "JinxQ",
+      "maxrank": 5,
       "description": "Jinx modifies her basic attacks by swapping between Pow-Pow, her minigun and Fishbones, her rocket launcher. Attacks with Pow-Pow grant Attack Speed, while attacks with Fishbones deal area of effect damage, gain increased range, and drain Mana.",
       "tooltip": "Jinx swaps weapons.<br><br><span class=\"colorFF9900\">Fishbones, the Rocket Launcher:</span> Basic attacks deal 110% Damage to the target and nearby enemies, gain {{ e3 }} range, drain Mana, and scale {{ e5 }}% less with bonus Attack Speed.<br><br><span class=\"colorFF9900\">Pow-Pow, the Minigun:</span> Basic attacks grant bonus Attack Speed for 2.5 seconds. This effect stacks up to 3 times for a total bonus of <span class=\"colorFFFFFF\">{{ f4 }}%</span> (bonus scales with spell rank and Jinx's level). Stacks fall off one at a time and only benefit Jinx's first attack after switching to Rocket Launcher.",
       "cooldown": [1, 1, 1, 1, 1],
       "range": [600, 600, 600, 600, 600],
+      "effect":[null,[30,40,50,60,70],[100,100,100,100,100],[75,100,125,150,175],[20,20,20,20,20],[25,25,25,25,25],[33.25,33.25,33.25,33.25,33.25],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+      "vars":[],
       "resource": {
         "name": "Mana per rocket",
         "values": [20, 20, 20, 20, 20]
@@ -44,10 +47,13 @@
       "name": "Zap!",
       "key": "W",
       "file": "JinxW",
+      "maxrank": 5,
       "description": "Jinx uses Zapper, her shock pistol, to fire a blast that deals damage to the first enemy hit, slowing and revealing it.",
       "tooltip": "Jinx fires a shock blast that deals {{ e1 }} <span class=\"colorFF8C00\">(+{{ a1 }})</span> Physical Damage to the first enemy hit, revealing it and slowing it by {{ e2 }}% for 2 seconds.",
       "cooldown": [10, 9, 8, 7, 6],
       "range": [1450, 1450, 1450, 1450, 1450],
+      "effect":[null,[10,60,110,160,210],[30,40,50,60,70],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+      "vars":[{"link":"attackdamage","coeff":[1.4, 1.4, 1.4, 1.4, 1.4],"key":"a1"}],
       "resource": {
           "name": "Mana",
           "values": [50, 60, 70, 80, 90]
@@ -58,10 +64,13 @@
       "name": "Flame Chompers!",
       "key": "E",
       "file": "JinxE",
+      "maxrank": 5,
       "description": "Jinx throws out a line of snare grenades that explode after 5 seconds, lighting enemies on fire. Flame Chompers will bite enemy champions who walk over them, rooting them in place.",
       "tooltip": "Jinx tosses out 3 chompers that, once armed, explode on contact with enemy champions, rooting the target for 1.5 seconds and dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage over 1.5 seconds to nearby enemies. Chompers last for 5 seconds.",
       "cooldown": [24, 22, 20, 18, 16],
       "range": [900, 900, 900, 900, 900],
+      "effect":[null,[70,120,170,220,270],[100,140,180,220,260],[30,35,40,45,50],[35,50,65,80,95],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+      "vars":[{"link":"spelldamage","coeff":[1, 1, 1, 1, 1],"key":"a1"}],
       "resource": {
           "name": "Mana",
           "values": [70, 70, 70, 70, 70]
@@ -72,10 +81,13 @@
       "name": "Super Mega Death Rocket!",
       "key": "R",
       "file": "JinxR",
+      "maxrank": 3,
       "description": "Jinx fires a super rocket across the map that gains damage as it travels. The rocket will explode upon colliding with an enemy champion, dealing damage to it and surrounding enemies based on their missing Health.",
       "tooltip": "Jinx fires a rocket that gains damage over the first second it travels. It explodes on the first enemy champion hit, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ a1 }})</span> to {{ e2 }} <span class=\"colorFF8C00\">(+{{ a2 }})</span> Physical Damage plus {{ e3 }}% of the target's missing Health. Nearby enemies take 80% Damage.",
       "cooldown": [90, 75, 60],
       "range": [25000, 25000, 25000],
+      "effect":[null,[25,35,45],[250,350,450],[25,30,35],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]],
+      "vars":[{"link":"bonusattackdamage","coeff":[0.15, 0.15, 0.15],"key":"a1"},{"link":"bonusattackdamage","coeff":[1.5, 1.5, 1.5],"key":"a2"}],
       "resource": {
           "name": "Mana",
           "values": [100, 100, 100]

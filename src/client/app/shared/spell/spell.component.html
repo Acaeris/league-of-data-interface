@@ -3,37 +3,33 @@
     <div class="eleven wide column">
       <h3 class="ui header">{{ spell.name }}</h3>
       <ui-spell-icon type="spell" key="{{ spell.key }}" name="{{ spell.file }}" class="left floated"></ui-spell-icon>
-      <p [innerHTML]="spell.tooltip"></p>
+      <p [innerHTML]="tooltip"></p>
     </div>
     <div class="five wide column">
       <div class="ui dropdown button">
         <div class="text">Select Rank</div>
         <i class="dropdown icon"></i>
         <div class="menu">
-          <div class="item" data-value="1" (click)="update(1)">Rank 1</div>
-          <div class="item" data-value="2" (click)="update(2)">Rank 2</div>
-          <div class="item" data-value="3" (click)="update(3)">Rank 3</div>
-          <div class="item" data-value="4" (click)="update(4)">Rank 4</div>
-          <div class="item" data-value="5" (click)="update(5)">Rank 5</div>
+          <div class="item" *ngFor="let rank of ranks" (click)="update(rank)">Rank {{ rank }}</div>
         </div>
       </div>
       <div class="ui list">
         <div class="item">
           <i class="target icon"></i>
           <div class="content">
-            <span class="name">Range:</span> {{ spell.range[level - 1] }}
+            <span class="name">Range:</span> {{ spell.range[level] }}
           </div>
         </div>
         <div class="item">
           <i class="refresh icon"></i>
           <div class="content">
-            <span class="name">Cooldown:</span> {{ spell.cooldown[level - 1] }} sec
+            <span class="name">Cooldown:</span> {{ spell.cooldown[level] }} sec
           </div>
         </div>
         <div class="item">
           <i class="lab icon"></i>
           <div class="content">
-            <span class="name">Resource:</span> {{ spell.resource.values[level - 1] }} {{ spell.resource.name }}
+            <span class="name">Resource:</span> {{ spell.resource.values[level] }} {{ spell.resource.name }}
           </div>
         </div>
       </div>

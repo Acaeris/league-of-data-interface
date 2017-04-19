@@ -29,10 +29,13 @@
       "name": "Vault Breaker",
       "key": "Q",
       "file": "ViQ",
+      "maxrank": 5,
       "description": "Vi charges her gauntlets and unleashes a vault shattering punch, carrying her forward. Enemies she hits are knocked back and receive a stack of Denting Blows.",
       "tooltip": "Charges a powerful punch that carries Vi forward.<br><br><span class=\"colorFF9900\">First Cast:</span> Slows Movement Speed by {{ e4 }}% while increasing damage and dash range over 1.25 seconds.<br><br><span class=\"colorFF9900\">Second Cast:</span> Dashes forward dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ a1 }})</span> to {{ f2 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage and applying Denting Blows to all enemies hit (deals {{ e3 }}% damage to minions and monsters). Stops upon colliding with an enemy champion, knocking it back.",
       "cooldown": [16, 14, 12, 10, 8],
       "range": [250, 250, 250, 250, 250],
+      "effect":[null,[100,150,200,250,300],[2,2,2,2,2],[75,75,75,75,75],[15,15,15,15,15],[6,6,6,6,6],[5,5,5,5,5],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+      "vars":[{"link":"bonusattackdamage","coeff":[0.8, 0.8, 0.8, 0.8, 0.8],"key":"a1"},{"link":"bonusattackdamage","coeff":[1.4, 1.4, 1.4, 1.4, 1.4],"key":"f1"}],
       "resource": {
         "name": "Mana",
         "values": [50, 60, 70, 80, 90]
@@ -43,10 +46,13 @@
       "name": "Denting Blows",
       "key": "W",
       "file": "ViW",
+      "maxrank": 5,
       "description": "Vi's punches break her opponent's Armor, dealing bonus damage and granting her Attack Speed.",
       "tooltip": "Every 3rd attack on the same target deals an additional {{ e1 }}% <span class=\"colorFF8C00\">(+{{ f1 }}%)</span> of the target's maximum Health as physical damage, reduces its Armor by {{ e3 }}% and grants Vi {{ e2 }}% Attack Speed for {{ e4 }} seconds (max {{ e5 }} damage vs. monsters).",
       "cooldown": [0, 0, 0, 0, 0],
       "range": [750, 750, 750, 750, 750],
+      "effect":[null,[4,5.5,7,8.5,10],[30,35,40,45,50],[20,20,20,20,20],[4,4,4,4,4],[300,300,300,300,300],[4,4,4,4,4],[0.0286,0.0286,0.0286,0.0286,0.0286],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+      "vars":[{"link":"@special.viw","coeff":[35, 35, 35, 35, 35],"key":"f1"}],
       "resource": {
         "name": "",
         "values": [0,0,0,0,0]
@@ -57,10 +63,17 @@
       "name": "Excessive Force",
       "key": "E",
       "file": "ViE",
+      "maxrank": 5,
       "description": "Vi's next attack blasts through her target, dealing damage to enemies behind it.",
       "tooltip": "Causes next basic attack to deal {{ e1 }} <span class=\"colorFF8C00\">(+{{ f3 }})</span> <span class=\"color99FF99\">(+{{ a1 }})</span> physical damage to the target and enemies behind it.<br><br></span>Vi charges a new punch every <span class=\"colorFFFFFF\">{{ f1 }}</span> seconds and can hold 2 charges at once.",
       "cooldown": [1, 1, 1, 1, 1],
       "range": [400, 400, 400, 400, 400],
+      "effect":[null,[10,30,50,70,90],[1.15,1.15,1.15,1.15,1.15],[50,50,50,50,50],[1.5,1.5,1.5,1.5,1.5],[6,6,6,6,6],[1,1,1,1,1],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+      "vars":[
+        {"link":"attackdamage","coeff":[1.15, 1.15, 1.15, 1.15, 1.15],"key":"f3"},
+        {"link":"spelldamage","coeff":[0.7, 0.7, 0.7, 0.7, 0.7],"key":"a1"},
+        {"link":"@text","coeff":[14,12.5,11,9.5,8],"key":"f1"}
+      ],
       "resource": {
         "name": "Mana",
         "values": [40, 45, 50, 55, 60]
@@ -71,10 +84,13 @@
       "name": "Assault and Battery",
       "key": "R",
       "file": "ViR",
+      "maxrank": 3,
       "description": "Vi runs down an enemy, knocking aside anyone in the way. When she reaches her target she knocks it into the air, jumps after it, and slams it back into the ground.",
       "tooltip": "Targets an enemy champion and chases it down, knocking it up for 1.25 seconds, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ a1 }})</span> physical damage.<br><br>While charging, Vi cannot be stopped and has <span class=\"coloree91d7\">True Sight</span> of the target. Any enemies in the way are knocked aside and dealt 75% of the damage.",
       "cooldown": [150, 115, 80],
       "range": [800, 800, 800],
+      "effect":[null,[150,300,450],[0.75,0.75,0.75],[1.25,1.25,1.25],[4,4,4],[1,1.5,2],[800,800,800],[0,0,0],[0,0,0],[0,0,0],[0,0,0]],
+      "vars":[{"link":"bonusattackdamage","coeff":[1.4, 1.4, 1.4],"key":"a1"}],
       "resource": {
         "name": "Mana",
         "values": [100, 125, 150]
