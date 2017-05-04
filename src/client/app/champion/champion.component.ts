@@ -15,7 +15,7 @@ import { Champion } from '../models/champion';
 export class ChampionComponent implements OnInit, AfterViewChecked {
   champion: Champion;
 	errorMessage: string;
-  name: string;
+  id: number;
 
   /**
 	 * Creates an instance of the ChampionComponent with the injected
@@ -31,7 +31,7 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
    */
   ngOnInit() {
     this.route.params.subscribe(
-      params => this.getChampion(params['name'])
+      params => this.getChampion(params['id'])
     )
   }
 
@@ -49,10 +49,10 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
 
   /**
    * Handles the championService observable
-   * @param {string} name - Name of champion to fetch
+   * @param {number} id - Name of champion to fetch
    */
-  getChampion(name: string) {
-    this.championService.get(name)
+  getChampion(id: number) {
+    this.championService.get(id)
       .subscribe(
         data => this.showChampion(data),
         error => this.errorMessage = <any>error

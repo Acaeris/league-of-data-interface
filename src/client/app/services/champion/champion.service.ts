@@ -17,11 +17,11 @@ export class ChampionService {
 
     /**
      * Returns an Observable for the HTTP GET request for the JSON resource.
-     * @param {string} name - Name of the champion to fetch.
+     * @param {number} name - ID of the champion to fetch.
      * @return {Champion} The Observable for the HTTP request.
      */
-    get(name: string): Observable<Champion> {
-        return this.http.get('assets/' + name + '.json')
+    get(id: number): Observable<Champion> {
+        return this.http.get('http://localhost/champion/' + id)
             .map(res => <Champion>res.json())
             .catch(this.handleError);
     }
