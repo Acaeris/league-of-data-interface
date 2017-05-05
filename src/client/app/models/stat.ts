@@ -1,4 +1,4 @@
 export interface Stat {
-  label: String;
-  value: String;
+  label: string,
+  value: string
 }

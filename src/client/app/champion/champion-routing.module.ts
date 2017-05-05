@@ -5,7 +5,7 @@ import { ChampionComponent } from './champion.component';
 @NgModule({
   imports: [
     RouterModule.forChild([
-      { path: 'champion/:name', component: ChampionComponent }
+      { path: 'champion/:id', component: ChampionComponent }
     ])
   ],
   exports: [RouterModule]

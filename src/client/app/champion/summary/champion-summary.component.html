@@ -1,6 +1,6 @@
 <div class="ui stackable grid">
   <div class="eleven wide column">
-    <h3 class="ui header">Combos</h3>
+    <h3 class="ui header" *ngIf="champion.combo">Combos</h3>
     <div class="ui basic segment" *ngFor="let combo of champion.combos">
       <div class="ui breadcrumb">
         <h5 class="ui block header">{{combo.title}}</h5>
@@ -12,8 +12,8 @@
     </div>
   </div>
   <div class="five wide column">
-    <h3 class="ui top attached header segment">Strength over Time</h3>
-    <table class="ui bottom attached definition table">
+    <h3 class="ui top attached header segment" *ngIf="champion.rating">Strength over Time</h3>
+    <table class="ui bottom attached definition table" *ngIf="champion.rating">
       <tbody>
         <tr>
           <td>Early</td>
@@ -26,6 +26,64 @@
         <tr>
           <td>Late</td>
           <td><span class="ui custom rating {{champion.name | lowercase}}" data-max-rating="5" attr.data-rating="{{champion.rating.late}}"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 class="ui top attached header segment" *ngIf="champion.stats">Base Stats</h3>
+    <table class="ui bottom attached definition table" *ngIf="champion.stats">
+      <tbody>
+        <tr>
+          <td>Health</td>
+          <td>{{champion.stats.health.baseValue}}<br />
+            (+{{champion.stats.health.increasePerLevel}}/lv)</td>
+        </tr>
+        <tr>
+          <td>Health Regen</td>
+          <td>{{champion.stats.health.regenBaseValue}}<br />
+            (+{{champion.stats.health.regenIncreasePerLevel}}/lv)</td>
+        </tr>
+        <tr>
+          <td>{{champion.resourceType | capitalize}}</td>
+          <td>{{champion.stats.resource.baseValue}}<br />
+            (+{{champion.stats.resource.increasePerLevel}}/lv)</td>
+        </tr>
+        <tr>
+          <td>{{champion.resourceType | capitalize}} Regen</td>
+          <td>{{champion.stats.resource.regenBaseValue}}<br />
+            (+{{champion.stats.resource.regenIncreasePerLevel}}/lv)</td>
+        </tr>
+        <tr>
+          <td>Move Speed</td>
+          <td>{{champion.stats.moveSpeed}}</td>
+        </tr>
+        <tr>
+          <td>Attack Range</td>
+          <td>{{champion.stats.attack.range}}</td>
+        </tr>
+        <tr>
+          <td>Base Damage</td>
+          <td>{{champion.stats.attack.baseDamage}}<br />
+            (+{{champion.stats.attack.damagePerLevel}}/lv)</td>
+        </tr>
+        <tr>
+          <td>Attack Speed</td>
+          <td>{{champion.stats.attack.attackSpeed}}<br />
+            (+{{champion.stats.attack.attackSpeedPerLevel}}/lv)</td>
+        </tr>
+        <tr>
+          <td>Crit Chance</td>
+          <td>{{champion.stats.attack.baseCritChance}}<br />
+            (+{{champion.stats.attack.critChancePerLevel}}/lv)</td>
+        </tr>
+        <tr>
+          <td>Armor</td>
+          <td>{{champion.stats.armor.baseValue}}<br />
+            (+{{champion.stats.armor.increasePerLevel}}/lv)</td>
+        </tr>
+        <tr>
+          <td>Magic Resist</td>
+          <td>{{champion.stats.magicResist.baseValue}}<br />
+            (+{{champion.stats.magicResist.increasePerLevel}}/lv)</td>
         </tr>
       </tbody>
     </table>

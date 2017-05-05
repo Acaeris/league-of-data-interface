@@ -1,7 +1,7 @@
 <div class="content">
   <i class="right floated star icon"></i>
   <div class="ui left floated image">
-    <img src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/champion/{{champion.name}}.png" />
+    <img src="http://ddragon.leagueoflegends.com/cdn/{{champion.version}}/img/champion/{{champion.imageName | stripSpaces}}.png" />
   </div>
   <h2 class="header">{{champion.name}}</h2>
   <div class="meta">
@@ -14,6 +14,6 @@
 </div>
 <div class="ui segment">
   <div class="ui mini four statistics">
-    <ui-statistic *ngFor="let stat of champion.stats" [stat]="stat"></ui-statistic>
+    <ui-statistic *ngFor="let stat of champion.playStats" [stat]="stat"></ui-statistic>
   </div>
 </div>

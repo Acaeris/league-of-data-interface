@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { StatisticComponent } from './statistic/statistic.component';
 import { SpellComponent } from './spell/spell.component';
 import { SpellIconComponent } from './spell-icon/spell-icon.component';
+import { CapitalizePipe } from '../pipes/capitalize.pipe';
+import { StripSpacesPipe } from '../pipes/strip-spaces.pipe';
 
 import { SemanticDropdownDirective } from '../directives/semantic-dropdown.directive';
 
@@ -18,7 +20,9 @@ import { SemanticDropdownDirective } from '../directives/semantic-dropdown.direc
       StatisticComponent,
       SpellComponent,
       SpellIconComponent,
-      SemanticDropdownDirective
+      SemanticDropdownDirective,
+      CapitalizePipe,
+      StripSpacesPipe
   ],
   exports: [
     StatisticComponent,
@@ -27,7 +31,9 @@ import { SemanticDropdownDirective } from '../directives/semantic-dropdown.direc
     SemanticDropdownDirective,
     CommonModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    CapitalizePipe,
+    StripSpacesPipe
   ]
 })
 export class SharedModule {
