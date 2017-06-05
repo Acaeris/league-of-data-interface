@@ -1,15 +1,22 @@
-import { ChampionRegenStat } from './champion-regen-stat';
-import { ChampionAttackStat } from './champion-attack-stat';
-import { ChampionDefenseStat } from './champion-defense-stat';
-
 export interface ChampionStats {
-  iD: number,
   moveSpeed: number,
-  health: ChampionRegenStat,
-  resource: ChampionRegenStat,
-  attack: ChampionAttackStat,
-  armor: ChampionDefenseStat,
-  magicResist: ChampionDefenseStat,
-  version: string,
-  region: string
+  health: number,
+  healthPerLevel: number,
+  healthRegen: number,
+  healthRegenPerLevel: number,
+  resource: number,
+  resourcePerLevel: number,
+  resourceRegen: number,
+  resourceRegenPerLevel: number,
+  attack: number,
+  attackPerLevel: number,
+  attackRange: number,
+  attackSpeed: number,
+  attackSpeedPerLevel: number,
+  crit: number,
+  critPerLevel: number,
+  armor: number,
+  armorPerLevel: number,
+  magicResist: number,
+  magicResistPerLevel: number
 }

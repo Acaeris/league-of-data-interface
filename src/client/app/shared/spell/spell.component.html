@@ -2,7 +2,7 @@
   <div class="ui stackable grid">
     <div class="eleven wide column">
       <h3 class="ui header">{{ spell.name }}</h3>
-      <ui-spell-icon type="spell" key="{{ spell.key }}" name="{{ spell.file }}" class="left floated"></ui-spell-icon>
+      <ui-spell-icon type="spell" key="{{ spell.key }}" name="{{ spell.image }}" class="left floated"></ui-spell-icon>
       <p [innerHTML]="tooltip"></p>
     </div>
     <div class="five wide column">
@@ -17,13 +17,13 @@
         <div class="item">
           <i class="target icon"></i>
           <div class="content">
-            <span class="name">Range:</span> {{ spell.range[level] }}
+            <span class="name">Range:</span> {{ spell.ranges[level] }}
           </div>
         </div>
         <div class="item">
           <i class="refresh icon"></i>
           <div class="content">
-            <span class="name">Cooldown:</span> {{ spell.cooldown[level] }} sec
+            <span class="name">Cooldown:</span> {{ spell.cooldowns[level] }} sec
           </div>
         </div>
         <div class="item">

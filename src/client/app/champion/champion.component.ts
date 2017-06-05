@@ -16,6 +16,7 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
   champion: Champion;
 	errorMessage: string;
   id: number;
+  version: string;
 
   /**
 	 * Creates an instance of the ChampionComponent with the injected
@@ -31,8 +32,11 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
    */
   ngOnInit() {
     this.route.params.subscribe(
-      params => this.getChampion(params['id'])
-    )
+      params => this.id = params['id']
+    );
+    this.route.queryParams.subscribe(
+      params => this.getChampion(this.id, params['v'])
+    );
   }
 
   /**
@@ -48,15 +52,16 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
   }
 
   onKey(value: number) {
-    this.getChampion(value);
+    this.getChampion(value, this.version);
   }
 
   /**
    * Handles the championService observable
    * @param {number} id - ID of champion to fetch
+   * @param {string} version - Version to fetch
    */
-  getChampion(id: number) {
-    this.championService.get(id)
+  getChampion(id: number, version: string) {
+    this.championService.get(id, version)
       .subscribe(
         data => this.showChampion(data),
         error => this.errorMessage = <any>error
