@@ -44,25 +44,6 @@
       <div class="ui stackable grid">
         <div class="twelve wide column">
           <div class="ui top attached header segment">Performance Chart</div>
-          <div class="ui attached segment">
-            <canvas baseChart width="600px" height="150px"
-              [datasets]="lineChartData"
-              [labels]="lineChartLabels"
-              [options]="lineChartOptions"
-              [colors]="lineChartColors"
-              [legend]="lineChartLegend"
-              [chartType]="lineChartType"
-              (chartHover)="chartHovered($event)"
-              (chartClick)="chartClicked($event)"></canvas>
-            <div class="ui small secondary menu">
-              <a class="item">Monthly</a>
-              <a class="active item">Weekly</a>
-              <a class="item">Daily</a>
-            </div>
-          </div>
-          <div class="ui bottom attached segment">
-            <ui-rankchart *ngIf="chartData" [data]="chartData"></ui-rankchart>
-          </div>
         </div>
         <div class="four wide center aligned column">
           <ui-statistic [stat]="{'label':'Current Rank','value':'Bronze'}" class="ui mini"></ui-statistic>

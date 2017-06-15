@@ -25,7 +25,7 @@ export class ChampionService {
     let params: URLSearchParams = new URLSearchParams();
     params.set('id', id.toString());
     params.set('v', version);
-    return this.http.get('http://192.168.56.101/app_dev.php/champion/id', {
+    return this.http.get('http://127.0.0.1/app_dev.php/champion/id', {
         search: params
       })
       .map(res => <Champion>res.json())

@@ -143,15 +143,12 @@
     "@angular/platform-browser-dynamic": "^4.0.0-rc.2",
     "@angular/router": "^4.0.0-rc.2",
     "@types/jquery": "^2.0.41",
-    "chart.js": "^2.5.0",
     "core-js": "^2.4.1",
-    "d3": "^4.7.2",
     "intl": "^1.2.5",
     "jquery": "^3.1.1",
-    "ng2-charts": "^1.5.0",
     "rxjs": "~5.1.1",
     "semantic-ui": "^2.2.10",
     "systemjs": "0.19.41",
-    "zone.js": "^0.7.2"
+    "zone.js": "^0.8.12"
   }
 }
