@@ -16,6 +16,6 @@ export class StatisticComponent implements OnInit {
   constructor(private el: ElementRef) {}
 
   ngOnInit() {
-    $(this.el.nativeElement).addClass('statistic');
+    this.el.nativeElement.class += ' statistic';
   }
 }

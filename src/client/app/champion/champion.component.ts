@@ -1,7 +1,8 @@
-import { Component, EventEmitter, AfterViewChecked, OnInit } from '@angular/core';
+import { Component, EventEmitter, AfterViewChecked, OnInit, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ChampionService } from '../services/champion/champion.service';
 import { Champion } from '../models/champion';
+declare var $:JQueryStatic;
 
 /**
  * This class represents the lazy loaded ChampionComponent.
@@ -14,9 +15,10 @@ import { Champion } from '../models/champion';
 })
 export class ChampionComponent implements OnInit, AfterViewChecked {
   champion: Champion;
-	errorMessage: string;
+  errorMessage: string;
   id: number;
   version: string;
+  background: string;
 
   /**
 	 * Creates an instance of the ChampionComponent with the injected
@@ -25,7 +27,7 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
 	 * @param {ChampionService} championService - The injected ChampionService
    * @param {ActivatedRoute} route - Router
 	 */
-	constructor(private championService: ChampionService, private route: ActivatedRoute) { }
+  constructor(private championService: ChampionService, private route: ActivatedRoute) { }
 
   /**
    * Get the champion data
@@ -43,16 +45,21 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
    * Update the view after data change
    */
   ngAfterViewChecked() {
-    $('.ui.rating').each(function (i: number, e) {
-      $(e).rating('set rating', $(e).attr("data-rating"))
+    $('.ui.rating').each(function(i: number, e) {
+      $(e).rating('set rating', $(e).attr('data-rating'));
     });
-    $('.ui.tabular.menu .item').each(function (i: number, e) {
+    $('.ui.tabular.menu .item').each(function(i: number, e) {
       $(e).tab();
     });
-  }
-
-  onKey(value: number) {
-    this.getChampion(value, this.version);
+    $('.ui.dropdown.champions').dropdown({
+      apiSettings: {
+        url: 'http://127.0.0.1/app_dev.php/champion/list?s={query}'
+      },
+      onChange: (value: number, text: string) => {
+        this.id = value;
+        this.getChampion(value, this.version);
+      }
+    });
   }
 
   /**
@@ -63,13 +70,14 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
   getChampion(id: number, version: string) {
     this.championService.get(id, version)
       .subscribe(
-        data => this.showChampion(data),
-        error => this.errorMessage = <any>error
+      data => this.showChampion(data),
+      error => this.errorMessage = <any>error
       );
   }
 
   showChampion(data: any) {
     this.champion = data;
-    $('.champion').css('background-image', 'url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + this.champion.imageName + '_0.jpg)');
+    this.background = 'url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/'
+      + this.champion.imageName + '_0.jpg)';
   }
 }

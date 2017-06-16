@@ -10,5 +10,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['mobilebar.component.css']
 })
 export class MobilebarComponent {
-  @Input() pageTitle;
+  @Input() pageTitle: string;
 }

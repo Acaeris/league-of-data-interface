@@ -9,7 +9,7 @@ import { SpellIconComponent } from './spell-icon/spell-icon.component';
 import { CapitalizePipe } from '../pipes/capitalize.pipe';
 import { StripSpacesPipe } from '../pipes/strip-spaces.pipe';
 
-import { SemanticDropdownDirective } from '../directives/semantic-dropdown.directive';
+import { SemanticDropdownDirective } from '../directives/suiDropdown.directive';
 
 /**
  * Do not specify providers for modules that might be imported by a lazy loaded module.

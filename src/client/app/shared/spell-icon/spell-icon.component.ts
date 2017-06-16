@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
 
 /**
  * This class represents a Spell icon component
@@ -14,9 +14,9 @@ export class SpellIconComponent implements OnInit {
   @Input() name: string;
   @Input() type: string;
 
-  constructor(private el: ElementRef) {}
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
 
   ngOnInit() {
-    $(this.el.nativeElement).addClass('ui image');
+    this.renderer.addClass(this.el.nativeElement, 'ui image');
   }
 }

@@ -1,6 +1,7 @@
 import { Directive, ElementRef, Input, OnInit } from '@angular/core';
+declare var $:JQueryStatic;
 
-@Directive({ selector: '.ui.dropdown'})
+@Directive({ selector: '[suiDropdown]'})
 export class SemanticDropdownDirective implements OnInit {
     constructor(private el: ElementRef) { }
 

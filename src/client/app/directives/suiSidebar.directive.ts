@@ -1,6 +1,7 @@
 import { Directive, ElementRef, Input, OnInit } from '@angular/core';
+declare var $:JQueryStatic;
 
-@Directive({ selector: '.ui.sidebar'})
+@Directive({ selector: '[suiSidebar]'})
 export class SemanticSidebarDirective implements OnInit {
     constructor(private el: ElementRef) { }
 

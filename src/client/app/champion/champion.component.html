@@ -1,11 +1,11 @@
-<section class="champion">
+<section class="champion" [style.background-image]="background">
   <div class="ui container">
     <champion-card class="ui fluid card" *ngIf="champion" [champion]="champion"></champion-card>
-    <div class="ui mini form">
-      <div class="inline field">
-        <label>Enter Champion ID:</label>
-        <input type="text" #championId (keyup.enter)="onKey(championId.value)">
-      </div>
+    <div class="ui dropdown labeled search icon button champions">
+      <i class="dropdown icon"></i>
+      <input type="hidden">
+      <div class="text">Select Champion</div>
+      <div class="menu"></div>
     </div>
     <div class="ui top attached tabular small menu">
       <a class="active item" data-tab="summary">Summary</a>

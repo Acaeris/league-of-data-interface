@@ -1,6 +1,7 @@
 import { Directive, ElementRef, Input, OnInit } from '@angular/core';
+declare var $:JQueryStatic;
 
-@Directive({ selector: '.ui.rating'})
+@Directive({ selector: '[suiRating]'})
 export class SemanticRatingDirective implements OnInit {
   constructor(private el: ElementRef) {}
 
