@@ -10,12 +10,9 @@ import { HomeModule } from './home/home.module';
 import { SummonerModule } from './summoner/summoner.module';
 import { SharedModule } from './shared/shared.module';
 
-import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { MobilebarComponent } from './shared/mobilebar/mobilebar.component';
 import { FooterComponent } from './shared/footer/footer.component';
-
-import { SemanticSidebarDirective } from './directives/suiSidebar.directive';
 
 @NgModule({
   imports: [
@@ -28,12 +25,10 @@ import { SemanticSidebarDirective } from './directives/suiSidebar.directive';
     SharedModule.forRoot()
   ],
   declarations: [
-      ToolbarComponent,
       NavbarComponent,
       MobilebarComponent,
       FooterComponent,
-      AppComponent,
-      SemanticSidebarDirective
+      AppComponent
   ],
   providers: [{
     provide: APP_BASE_HREF,

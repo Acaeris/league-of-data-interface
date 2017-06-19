@@ -12,7 +12,7 @@ import './operators';
   styleUrls: ['app.component.css'],
 })
 export class AppComponent {
-  pageTitle: string = "League of Data";
+  pageTitle: string = 'League of Data';
 
   constructor() {
     console.log('Environment config', Config);

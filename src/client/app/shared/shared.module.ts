@@ -2,6 +2,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { NgSemanticModule } from 'ng-semantic/ng-semantic';
 
 import { StatisticComponent } from './statistic/statistic.component';
 import { SpellComponent } from './spell/spell.component';
@@ -9,18 +10,20 @@ import { SpellIconComponent } from './spell-icon/spell-icon.component';
 import { CapitalizePipe } from '../pipes/capitalize.pipe';
 import { StripSpacesPipe } from '../pipes/strip-spaces.pipe';
 
-import { SemanticDropdownDirective } from '../directives/suiDropdown.directive';
+import { SuiSelectorComponent } from './selector/sui-selector.component';
+import { SuiRatingComponent } from './rating/sui-rating.component';
 
 /**
  * Do not specify providers for modules that might be imported by a lazy loaded module.
  */
 @NgModule({
-  imports: [CommonModule, RouterModule, FormsModule],
+  imports: [CommonModule, RouterModule, FormsModule, NgSemanticModule],
   declarations: [
       StatisticComponent,
       SpellComponent,
       SpellIconComponent,
-      SemanticDropdownDirective,
+      SuiSelectorComponent,
+      SuiRatingComponent,
       CapitalizePipe,
       StripSpacesPipe
   ],
@@ -28,10 +31,12 @@ import { SemanticDropdownDirective } from '../directives/suiDropdown.directive';
     StatisticComponent,
     SpellComponent,
     SpellIconComponent,
-    SemanticDropdownDirective,
+    SuiSelectorComponent,
+    SuiRatingComponent,
     CommonModule,
     FormsModule,
     RouterModule,
+    NgSemanticModule,
     CapitalizePipe,
     StripSpacesPipe
   ]

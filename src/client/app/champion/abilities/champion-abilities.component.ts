@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Champion } from '../../models/champion';
 
 /**
@@ -10,12 +10,6 @@ import { Champion } from '../../models/champion';
   templateUrl: 'champion-abilities.component.html',
   styleUrls: ['champion-abilities.component.css']
 })
-export class ChampionAbilitiesComponent implements OnInit {
+export class ChampionAbilitiesComponent {
   @Input() champion: Champion;
-
-  constructor(private el: ElementRef) {}
-
-  ngOnInit() {
-    $(this.el.nativeElement).addClass('ui bottom attached tab segment');
-  }
 }

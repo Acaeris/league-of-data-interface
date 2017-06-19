@@ -45,21 +45,11 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
    * Update the view after data change
    */
   ngAfterViewChecked() {
-    $('.ui.rating').each(function(i: number, e) {
-      $(e).rating('set rating', $(e).attr('data-rating'));
-    });
-    $('.ui.tabular.menu .item').each(function(i: number, e) {
-      $(e).tab();
-    });
-    $('.ui.dropdown.champions').dropdown({
-      apiSettings: {
-        url: 'http://127.0.0.1/app_dev.php/champion/list?s={query}'
-      },
-      onChange: (value: number, text: string) => {
-        this.id = value;
-        this.getChampion(value, this.version);
-      }
-    });
+  }
+
+  switchChampion(event: EventEmitter<{}>) {
+    this.id = event.value;
+    this.getChampion(event.value, this.version);
   }
 
   /**

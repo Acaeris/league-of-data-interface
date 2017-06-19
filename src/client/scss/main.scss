@@ -25,6 +25,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.ui.fixed.menu {
+  border-bottom: 1px solid $c-borderGold;
+}
+
+.ui.vertical.sidebar.menu {
+  border-right: 1px solid $c-borderGold;
+}
+
 .ui.breadcrumb .gold.divider {
   color: $c-text !important;
 }

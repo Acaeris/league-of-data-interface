@@ -1,5 +1,5 @@
-<nav class="ui fixed desktop menu">
-    <a class="item" [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">League of Data</a>
-    <a class="item" [routerLink]="['/champion', 1]" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:false}">Champion Analysis</a>
-    <a class="item" [routerLink]="['/summoner']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">Summoner Analysis</a>
-</nav>
+<sm-menu class="fixed desktop">
+    <a sm-item [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">League of Data</a>
+    <a sm-item [routerLink]="['/champion', 1]" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:false}">Champion Analysis</a>
+    <a sm-item [routerLink]="['/summoner']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">Summoner Analysis</a>
+</sm-menu>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 /**
  * This class represents the lazy loaded HomeComponent.
@@ -9,15 +9,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'home.component.html',
   styleUrls: ['home.component.css'],
 })
-export class HomeComponent implements OnInit {
-
-  /**
-   * Creates an instance of the HomeComponent
-   */
-  constructor() {}
-
-  ngOnInit() {
-
-  }
+export class HomeComponent {
 
 }

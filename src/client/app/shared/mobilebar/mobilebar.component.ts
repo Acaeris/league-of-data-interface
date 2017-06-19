@@ -6,8 +6,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   moduleId: module.id,
   selector: 'ui-mobilebar',
-  templateUrl: 'mobilebar.component.html',
-  styleUrls: ['mobilebar.component.css']
+  templateUrl: 'mobilebar.component.html'
 })
 export class MobilebarComponent {
   @Input() pageTitle: string;

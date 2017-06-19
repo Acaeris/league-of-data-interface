@@ -1,91 +1,100 @@
 <div class="ui stackable grid">
-  <div class="eleven wide column">
-    <h3 class="ui header" *ngIf="champion.combo">Combos</h3>
-    <div class="ui basic segment" *ngFor="let combo of champion.combos">
-      <div class="ui breadcrumb">
-        <h5 class="ui block header">{{combo.title}}</h5>
-        <span *ngFor="let spell of combo.spells; let isLast=last">
-          <ui-spell-icon type="spell" key="{{spell.key}}" name="{{spell.name}}"></ui-spell-icon>
-          <i class="gold right arrow icon divider" *ngIf="!isLast"></i>
-        </span>
-      </div>
+    <div class="eleven wide column">
+        <h3 class="ui header" *ngIf="champion.combo">Combos</h3>
+        <div class="ui basic segment" *ngFor="let combo of champion.combos">
+            <div class="ui breadcrumb">
+                <h5 class="ui block header">{{combo.title}}</h5>
+                <span *ngFor="let spell of combo.spells; let isLast=last">
+                    <ui-spell-icon type="spell" key="{{spell.key}}" name="{{spell.name}}"></ui-spell-icon>
+                    <i class="gold right arrow icon divider" *ngIf="!isLast"></i>
+                </span>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="five wide column">
-    <h3 class="ui top attached header segment" *ngIf="champion.rating">Strength over Time</h3>
-    <table class="ui bottom attached definition table" *ngIf="champion.rating">
-      <tbody>
-        <tr>
-          <td>Early</td>
-          <td><span suiRating class="ui custom rating {{champion.name | lowercase}}" data-max-rating="5" attr.data-rating="{{champion.rating.early}}"></span></td>
-        </tr>
-        <tr>
-          <td>Mid</td>
-          <td><span suiRating class="ui custom rating {{champion.name | lowercase}}" data-max-rating="5" attr.data-rating="{{champion.rating.mid}}"></span></td>
-        </tr>
-        <tr>
-          <td>Late</td>
-          <td><span suiRating class="ui custom rating {{champion.name | lowercase}}" data-max-rating="5" attr.data-rating="{{champion.rating.late}}"></span></td>
-        </tr>
-      </tbody>
-    </table>
-    <h3 class="ui top attached header segment" *ngIf="champion.stats">Base Stats</h3>
-    <table class="ui bottom attached definition table" *ngIf="champion.stats">
-      <tbody>
-        <tr>
-          <td>Health</td>
-          <td>{{champion.stats.health}}<br />
-            (+{{champion.stats.healthPerLevel}}/lv)</td>
-        </tr>
-        <tr>
-          <td>Health Regen</td>
-          <td>{{champion.stats.healthRegen}}<br />
-            (+{{champion.stats.healthRegenPerLevel}}/lv)</td>
-        </tr>
-        <tr>
-          <td>{{champion.resourceType | capitalize}}</td>
-          <td>{{champion.stats.resource}}<br />
-            (+{{champion.stats.resourcePerLevel}}/lv)</td>
-        </tr>
-        <tr>
-          <td>{{champion.resourceType | capitalize}} Regen</td>
-          <td>{{champion.stats.resourceRegen}}<br />
-            (+{{champion.stats.resourceRegenPerLevel}}/lv)</td>
-        </tr>
-        <tr>
-          <td>Move Speed</td>
-          <td>{{champion.stats.moveSpeed}}</td>
-        </tr>
-        <tr>
-          <td>Attack Range</td>
-          <td>{{champion.stats.attackRange}}</td>
-        </tr>
-        <tr>
-          <td>Base Damage</td>
-          <td>{{champion.stats.attack}}<br />
-            (+{{champion.stats.attackPerLevel}}/lv)</td>
-        </tr>
-        <tr>
-          <td>Attack Speed</td>
-          <td>{{champion.stats.attackSpeed}}<br />
-            (+{{champion.stats.attackSpeedPerLevel}}/lv)</td>
-        </tr>
-        <tr>
-          <td>Crit Chance</td>
-          <td>{{champion.stats.crit}}<br />
-            (+{{champion.stats.critPerLevel}}/lv)</td>
-        </tr>
-        <tr>
-          <td>Armor</td>
-          <td>{{champion.stats.armor}}<br />
-            (+{{champion.stats.armorPerLevel}}/lv)</td>
-        </tr>
-        <tr>
-          <td>Magic Resist</td>
-          <td>{{champion.stats.magicResist}}<br />
-            (+{{champion.stats.magicResistPerLevel}}/lv)</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div class="five wide column">
+        <h3 class="ui top attached header segment" *ngIf="champion.rating">Strength over Time</h3>
+        <table class="ui bottom attached definition table" *ngIf="champion.rating">
+            <tbody>
+                <tr>
+                    <td>Early</td>
+                    <td><sui-rating class="custom" [initialRating]="champion.rating.early" disabled="true"></sui-rating></td>
+                </tr>
+                <tr>
+                    <td>Mid</td>
+                    <td><sui-rating class="custom" [initialRating]="champion.rating.mid" disabled="true"></sui-rating></td>
+                </tr>
+                <tr>
+                    <td>Late</td>
+                    <td><sui-rating class="custom" [initialRating]="champion.rating.late" disabled="true"></sui-rating></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="ui top attached header segment" *ngIf="champion.stats">Base Stats</h3>
+        <table class="ui bottom attached definition table" *ngIf="champion.stats">
+            <tbody>
+                <tr>
+                    <td>Health</td>
+                    <td>{{champion.stats.health}}<br />
+                        (+{{champion.stats.healthPerLevel}}/lv)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Health Regen</td>
+                    <td>{{champion.stats.healthRegen}}<br />
+                        (+{{champion.stats.healthRegenPerLevel}}/lv)
+                    </td>
+                </tr>
+                <tr>
+                    <td>{{champion.resourceType | capitalize}}</td>
+                    <td>{{champion.stats.resource}}<br />
+                        (+{{champion.stats.resourcePerLevel}}/lv)
+                    </td>
+                </tr>
+                <tr>
+                    <td>{{champion.resourceType | capitalize}} Regen</td>
+                    <td>{{champion.stats.resourceRegen}}<br />
+                        (+{{champion.stats.resourceRegenPerLevel}}/lv)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Move Speed</td>
+                    <td>{{champion.stats.moveSpeed}}</td>
+                </tr>
+                <tr>
+                    <td>Attack Range</td>
+                    <td>{{champion.stats.attackRange}}</td>
+                </tr>
+                <tr>
+                    <td>Base Damage</td>
+                    <td>{{champion.stats.attack}}<br />
+                        (+{{champion.stats.attackPerLevel}}/lv)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Attack Speed</td>
+                    <td>{{champion.stats.attackSpeed}}<br />
+                        (+{{champion.stats.attackSpeedPerLevel}}/lv)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Crit Chance</td>
+                    <td>{{champion.stats.crit}}<br />
+                        (+{{champion.stats.critPerLevel}}/lv)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Armor</td>
+                    <td>{{champion.stats.armor}}<br />
+                        (+{{champion.stats.armorPerLevel}}/lv)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Magic Resist</td>
+                    <td>{{champion.stats.magicResist}}<br />
+                        (+{{champion.stats.magicResistPerLevel}}/lv)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

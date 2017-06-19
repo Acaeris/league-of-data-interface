@@ -1,17 +1,16 @@
 <section class="champion" [style.background-image]="background">
   <div class="ui container">
+    <sui-selector title="Select Champion" class="labeled search icon button" [options]="{ apiSettings: {
+      url: 'http://127.0.0.1/app_dev.php/champion/list?s={query}'
+    }}" (onChange)="switchChampion($event)"></sui-selector>
     <champion-card class="ui fluid card" *ngIf="champion" [champion]="champion"></champion-card>
-    <div class="ui dropdown labeled search icon button champions">
-      <i class="dropdown icon"></i>
-      <input type="hidden">
-      <div class="text">Select Champion</div>
-      <div class="menu"></div>
-    </div>
-    <div class="ui top attached tabular small menu">
-      <a class="active item" data-tab="summary">Summary</a>
-      <a class="item" data-tab="abilities">Abilities</a>
-    </div>
-    <champion-summary *ngIf="champion" [champion]="champion" class="active" data-tab="summary"></champion-summary>
-    <champion-abilities *ngIf="champion" [champion]="champion" data-tab="abilities"></champion-abilities>
+    <sm-tabs class="small">
+      <sm-tab title="Summary">
+        <champion-summary *ngIf="champion" [champion]="champion"></champion-summary>
+      </sm-tab>
+      <sm-tab title="Abilities">
+        <champion-abilities *ngIf="champion" [champion]="champion"></champion-abilities>
+      </sm-tab>
+    </sm-tabs>
   </div>
 </section>
