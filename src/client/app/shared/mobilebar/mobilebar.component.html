@@ -1,7 +1,13 @@
 <sm-sidebar class="vertical sidebar menu" #invertedSidebar>
-    <a class="item" [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">League of Data</a>
-    <a class="item" [routerLink]="['/champion', 1]" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">Champion Analysis</a>
-    <a class="item" [routerLink]="['/summoner']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">Summoner Analysis</a>
+    <a class="item" [routerLink]="['/']" [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}">League of Data</a>
+    <a class="item" [routerLink]="['/champion', 1]" [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}">Champion Analysis</a>
+    <sui-selector class="search" title="Champion Analysis" [options]="{ apiSettings: {
+      url: 'http://127.0.0.1/app_dev.php/champion/list?s={query}'
+    }}" (onChange)="switchChampion($event)"></sui-selector>
+    <a class="item" [routerLink]="['/summoner']" [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}">Summoner Analysis</a>
 </sm-sidebar>
 <!-- Mobile Header -->
 <sm-menu class="fixed mobile">

@@ -1,8 +1,5 @@
 <section class="champion" [style.background-image]="background">
   <div class="ui container">
-    <sui-selector title="Select Champion" class="labeled search icon button" [options]="{ apiSettings: {
-      url: 'http://127.0.0.1/app_dev.php/champion/list?s={query}'
-    }}" (onChange)="switchChampion($event)"></sui-selector>
     <champion-card class="ui fluid card" *ngIf="champion" [champion]="champion"></champion-card>
     <sm-tabs class="small">
       <sm-tab title="Summary">

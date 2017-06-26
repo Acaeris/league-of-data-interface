@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 /**
  * This class represents the navigation bar component.
@@ -8,4 +9,10 @@ import { Component } from '@angular/core';
   selector: 'ui-navbar',
   templateUrl: 'navbar.component.html'
 })
-export class NavbarComponent { }
+export class NavbarComponent {
+    constructor(private router: Router) { }
+
+    switchChampion(event: EventEmitter<{}>) {
+        this.router.navigate(['./champion', event.value]);
+    }
+}

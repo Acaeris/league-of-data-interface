@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 /**
  * This class represents the toolbar component.
@@ -9,5 +10,11 @@ import { Component, Input } from '@angular/core';
   templateUrl: 'mobilebar.component.html'
 })
 export class MobilebarComponent {
-  @Input() pageTitle: string;
+    @Input() pageTitle: string;
+
+    constructor(private router: Router) { }
+
+    switchChampion(event: EventEmitter<{}>) {
+        this.router.navigate(['./champion', event.value]);
+    }
 }

@@ -1,5 +1,9 @@
 <sm-menu class="fixed desktop">
-    <a sm-item [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">League of Data</a>
-    <a sm-item [routerLink]="['/champion', 1]" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:false}">Champion Analysis</a>
-    <a sm-item [routerLink]="['/summoner']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">Summoner Analysis</a>
+    <a sm-item [routerLink]="['/']" [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}">League of Data</a>
+    <sui-selector class="search" title="Champion Analysis" [options]="{ apiSettings: {
+      url: 'http://127.0.0.1/app_dev.php/champion/list?s={query}'
+    }}" (onChange)="switchChampion($event)"></sui-selector>
+    <a sm-item [routerLink]="['/summoner']" [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}">Summoner Analysis</a>
 </sm-menu>

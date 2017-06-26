@@ -16,7 +16,6 @@ declare var $:JQueryStatic;
 export class ChampionComponent implements OnInit, AfterViewChecked {
   champion: Champion;
   errorMessage: string;
-  id: number;
   version: string;
   background: string;
 
@@ -34,10 +33,10 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
    */
   ngOnInit() {
     this.route.params.subscribe(
-      params => this.id = params['id']
+      params => this.getChampion(params['id'], params['v'])
     );
     this.route.queryParams.subscribe(
-      params => this.getChampion(this.id, params['v'])
+      params => this.getChampion(params['id'], params['v'])
     );
   }
 
@@ -45,11 +44,6 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
    * Update the view after data change
    */
   ngAfterViewChecked() {
-  }
-
-  switchChampion(event: EventEmitter<{}>) {
-    this.id = event.value;
-    this.getChampion(event.value, this.version);
   }
 
   /**
