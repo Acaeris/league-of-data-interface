@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, URLSearchParams } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Summoner } from '../../models/summoner';
 
@@ -17,10 +17,18 @@ export class SummonerService {
 
     /**
      * Returns an Observable for the HTTP GET request for the JSON resource.
+     * @param {number} id - ID of the summoner to fetch.
+     * @param {string} region - Region to search in.
      * @return {Summoner} The Observable for the HTTP request.
      */
-    get(): Observable<Summoner> {
-        return this.http.get('assets/summoner.json')
+    get(id: number, region: string): Observable<Summoner> {
+        let params: URLSearchParams = new URLSearchParams();
+        params.set('id', id.toString());
+        params.set('region', region);
+
+        return this.http.get('http://127.0.0.1/app_dev.php/champion/id', {
+            search: params
+        })
             .map(res => <Summoner>res.json())
             .catch(this.handleError);
     }

@@ -20,12 +20,12 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
   background: string;
 
   /**
-	 * Creates an instance of the ChampionComponent with the injected
-	 * ChampionService
-	 *
-	 * @param {ChampionService} championService - The injected ChampionService
+   * Creates an instance of the ChampionComponent with the injected
+   * ChampionService
+   *
+   * @param {ChampionService} championService - The injected ChampionService
    * @param {ActivatedRoute} route - Router
-	 */
+   */
   constructor(private championService: ChampionService, private route: ActivatedRoute) { }
 
   /**

@@ -3,6 +3,7 @@
 .champion {
   background: transparent no-repeat center top fixed;
   background-size: cover;
+  transition: background-image 1s ease-in-out;
 
   .container {
     margin-top: 2.8em !important;

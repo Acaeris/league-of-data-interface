@@ -1,6 +1,7 @@
 import {
     Component, ChangeDetectionStrategy, Input, AfterViewInit, ViewChild, ElementRef, Output, EventEmitter
 } from '@angular/core';
+import { SelectorItem } from '../../models/selector-item';
 
 declare var jQuery: any;
 
@@ -16,7 +17,7 @@ export class SuiSelectorComponent implements AfterViewInit {
     @Input() icon: string;
     @Input() items: Array<{}>;
     @Input() options: {} = {};
-    @Output() onChange: EventEmitter<{}> = new EventEmitter<{}>();
+    @Output() onChange: EventEmitter<SelectorItem> = new EventEmitter<SelectorItem>();
     @ViewChild('dropdown') dropdown: ElementRef;
 
     ngAfterViewInit(): void {
@@ -26,7 +27,8 @@ export class SuiSelectorComponent implements AfterViewInit {
                 if (b !== null && b.length) {
                     innerText = b[0].innerText;
                 }
-                this.onChange.emit({value, text, innerText});
+                var item: SelectorItem = {value: value, text: text, innerText: innerText};
+                this.onChange.emit(item);
             }
         }, this.options);
 

@@ -1,5 +1,6 @@
 import { Component, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { SelectorItem } from '../../models/selector-item';
 
 /**
  * This class represents the navigation bar component.
@@ -12,7 +13,11 @@ import { Router } from '@angular/router';
 export class NavbarComponent {
     constructor(private router: Router) { }
 
-    switchChampion(event: EventEmitter<{}>) {
+    switchChampion(event: SelectorItem) {
         this.router.navigate(['./champion', event.value]);
+    }
+
+    switchSummoner(event: SelectorItem) {
+        this.router.navigate(['./summoner', event.value]);
     }
 }

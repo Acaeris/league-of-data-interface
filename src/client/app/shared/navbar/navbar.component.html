@@ -2,8 +2,9 @@
     <a sm-item [routerLink]="['/']" [routerLinkActive]="['active']"
         [routerLinkActiveOptions]="{exact:true}">League of Data</a>
     <sui-selector class="search" title="Champion Analysis" [options]="{ apiSettings: {
-      url: 'http://127.0.0.1/app_dev.php/champion/list?s={query}'
+        url: 'http://127.0.0.1/app_dev.php/champion/list?s={query}'
     }}" (onChange)="switchChampion($event)"></sui-selector>
-    <a sm-item [routerLink]="['/summoner']" [routerLinkActive]="['active']"
-        [routerLinkActiveOptions]="{exact:true}">Summoner Analysis</a>
+    <sui-selector class="search" title="Summoner Analysis" [options]="{ apiSettings: {
+        url: 'http://127.0.0.1/app_dev.php/summoner/list?s={query}'
+    }}" (onChange)="switchSummoner($event)"></sui-selector>
 </sm-menu>
