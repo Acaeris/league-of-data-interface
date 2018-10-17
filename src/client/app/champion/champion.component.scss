@@ -1,0 +1,22 @@
+@import '../../scss/variables';
+
+.champion {
+  background: transparent no-repeat center top fixed;
+  background-size: cover;
+  transition: background-image 1s ease-in-out;
+
+  .container {
+    margin-top: 2.8em !important;
+    padding-bottom: 1em;
+  }
+
+  .subheader {
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+  }
+
+  .ui.card {
+    background-color: $c-backgroundLightAlpha;
+  }
+}

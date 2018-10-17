@@ -1,0 +1,23 @@
+<section class="champion" [style.background-image]="background">
+  <div class="ui container">
+    <champion-card class="ui fluid card" *ngIf="champion" [champion]="champion"></champion-card>
+    <div class="ui dropdown labeled icon button champions">
+      <i class="dropdown icon"></i>
+      <input type="hidden">
+      <div class="text">Select Champion</div>
+      <div class="menu">
+        <div class="item" data-value="1">Annie</div>
+        <div class="item" data-value="2">Jinx</div>
+        <div class="item" data-value="3">Vi</div>
+      </div>
+    </div>
+    <div class="ui top attached tabular small menu">
+      <a class="active item" data-tab="summary">Summary</a>
+      <a class="item" data-tab="details">Details</a>
+      <a class="item" data-tab="abilities">Abilities</a>
+    </div>
+    <champion-summary *ngIf="champion" [champion]="champion" class="active" data-tab="summary"></champion-summary>
+    <champion-details *ngIf="champion" [champion]="champion" data-tab="details"></champion-details>
+    <champion-abilities *ngIf="champion" [champion]="champion" data-tab="abilities"></champion-abilities>
+  </div>
+</section>

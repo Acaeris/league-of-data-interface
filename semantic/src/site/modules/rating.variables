@@ -1,3 +1,11 @@
 /*******************************
          Site Overrides
 *******************************/
+
+@inactiveColor: @c-backgroundLight;
+
+@starActiveColor: @c-text;
+@starActiveShadowColor: @c-borderGold;
+
+@starSelectedColor: darken(@c-text, 5%);
+@starSelectedShadowColor: darken(@c-borderGold, 5%);

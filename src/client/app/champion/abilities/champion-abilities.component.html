@@ -1,0 +1,13 @@
+<div class="ui basic clearing spell segment" *ngIf="champion.passive">
+  <h3 class="ui header">{{ champion.passive.name }}</h3>
+  <div class="ui stackable grid">
+    <div class="eleven wide column">
+      <ui-spell-icon type="passive" key="Passive" name="{{ champion.passive.image }}" class="ui image left floated"></ui-spell-icon>
+      <p><span class="name">Description:</span> {{ champion.passive.description }}</p>
+    </div>
+  </div>
+</div>
+<div class="spells" *ngFor="let spell of champion.spells">
+  <div class="ui divider"></div>
+  <ui-spell [spell]="spell"></ui-spell>
+</div>

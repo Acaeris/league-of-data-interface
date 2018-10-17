@@ -1,3 +1,27 @@
 /*******************************
      User Global Variables
 *******************************/
+
+/* Colours */
+/* LoL Theme */
+@c-backgroundDark: #010A13;
+@c-backgroundLight: #0B131B;
+@c-backgroundCTA: #013350;
+@c-border: #1A2428;
+@c-borderGold: #6D5326;
+@c-text: #BDA168;
+
+@primaryColor: #087F92;
+
+@pageBackground: @c-backgroundDark;
+@textColor: rgba(255, 255, 255, 0.87);
+@selectedTextColor: @c-text;
+
+@internalBorderColor: @c-border;
+@solidBorderColor: @c-border;
+
+/* Fonts */
+@headerFont: 'Forum', serif;
+
+/* Details */
+@headerFontWeight: normal;

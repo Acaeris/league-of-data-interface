@@ -1,0 +1,6 @@
+@mixin linear-split($top, $bottom) {
+    background: $top;
+    background: -moz-linear-gradient(top, $top 0%, $top 50%, $bottom 50.1%, $bottom 100%);
+    background: -webkit-linear-gradient(top, $top 0%, $top 50%, $bottom 50.1%, $bottom 100%);
+    background: linear-gradient(to bottom, $top 0%, $top 50%, $bottom 50.1%, $bottom 100%);
+}

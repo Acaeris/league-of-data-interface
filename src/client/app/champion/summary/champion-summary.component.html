@@ -1,0 +1,33 @@
+<div class="ui stackable grid">
+  <div class="eleven wide column">
+    <table class="ui unstackable very basic table" *ngIf="champion.recommend">
+      <thead>
+        <tr>
+          <th>Recommended Summoner Spells</th>
+          <th>Pick Rate</th>
+          <th>Win Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let group of champion.recommend.summonerSpells">
+          <td>
+            <span *ngFor="let spell of group.spells; let isLast=last">
+              <ui-spell-icon suiTooltip class="mini" type="spell" name="{{spell.name}}" attr.data-title="{{spell.title}}" attr.data-content="{{spell.tooltip}}" data-position="top left" data-variation="mini"></ui-spell-icon>
+              <i *ngIf="!isLast">&nbsp;</i>
+            </span>
+          </td>
+          <td>
+            <strong>{{group.pickRate}}</strong><br />
+            {{group.pickCount}}
+          </td>
+          <td>
+            {{group.winRate}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="five wide column">
+
+  </div>
+</div>

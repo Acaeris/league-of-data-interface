@@ -1,0 +1,14 @@
+@import '../../../scss/variables';
+
+h2 {
+  margin-bottom: 0.1em;
+}
+
+img {
+  padding: 1px;
+  border: 1px solid $c-borderGold;
+}
+
+.segment {
+  background-color: $c-backgroundDarkAlpha;
+}

@@ -1,3 +1,10 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+@background: @c-backgroundDark;
+@borderColor: @c-border;
+
+@headerBackground: @c-backgroundLight;
+
+@definitionColumnBackground: @c-backgroundLight;

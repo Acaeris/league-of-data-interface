@@ -1,0 +1,28 @@
+{
+  "id": 24121626,
+  "name": "Acaeris",
+  "profileIconId": 1381,
+  "level": 30,
+  "ranks": [
+    {
+      "season": 3,
+      "group": 1,
+      "rank": 1
+    },
+    {
+      "season": 4,
+      "group": 1,
+      "rank": 1
+    },
+    {
+      "season": 5,
+      "group": 2,
+      "rank": 4
+    },
+    {
+      "season": 6,
+      "group": 1,
+      "rank": 2
+    }
+  ]
+}

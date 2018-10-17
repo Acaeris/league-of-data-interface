@@ -178,7 +178,7 @@ export class SeedConfig {
    * `index.html`.
    * @type {string}
    */
-  APP_TITLE = 'Welcome to angular-seed!';
+  APP_TITLE = 'League of Data';
 
   /**
    * Tracking ID.
@@ -515,6 +515,7 @@ export class SeedConfig {
       '@angular/router/testing':
         'node_modules/@angular/router/bundles/router-testing.umd.js',
 
+      'd3': `${this.NPM_BASE}d3/dist/d3.min.js`,
       'app/': `${this.APP_BASE}app/`,
       // For test config
       'dist/dev/': '/base/dist/dev/',

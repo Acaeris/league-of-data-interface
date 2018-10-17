@@ -1,0 +1,17 @@
+@import '../../scss/variables';
+
+.home .container {
+  margin-top: 2.8em !important;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: $c-white;
+}
+
+.details {
+  background-color: $c-backgroundCTA;
+
+  .container {
+    padding: 1em 0;
+    color: $c-white;
+  }
+}

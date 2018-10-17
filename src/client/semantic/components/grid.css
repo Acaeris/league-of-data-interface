@@ -1146,20 +1146,20 @@
 .ui.celled.grid {
   width: 100%;
   margin: 1em 0em;
-  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5;
-          box-shadow: 0px 0px 0px 1px #D4D4D5;
+  -webkit-box-shadow: 0px 0px 0px 1px #1A2428;
+          box-shadow: 0px 0px 0px 1px #1A2428;
 }
 .ui.celled.grid > .row {
   width: 100% !important;
   margin: 0em;
   padding: 0em;
-  -webkit-box-shadow: 0px -1px 0px 0px #D4D4D5;
-          box-shadow: 0px -1px 0px 0px #D4D4D5;
+  -webkit-box-shadow: 0px -1px 0px 0px #1A2428;
+          box-shadow: 0px -1px 0px 0px #1A2428;
 }
 .ui.celled.grid > .column:not(.row),
 .ui.celled.grid > .row > .column {
-  -webkit-box-shadow: -1px 0px 0px 0px #D4D4D5;
-          box-shadow: -1px 0px 0px 0px #D4D4D5;
+  -webkit-box-shadow: -1px 0px 0px 0px #1A2428;
+          box-shadow: -1px 0px 0px 0px #1A2428;
 }
 .ui.celled.grid > .column:first-child,
 .ui.celled.grid > .row > .column:first-child {
@@ -1519,8 +1519,8 @@
   
 /* Celled Reversed */
   .ui[class*="mobile reversed"].celled.grid > .row > .column:first-child {
-    -webkit-box-shadow: -1px 0px 0px 0px #D4D4D5;
-            box-shadow: -1px 0px 0px 0px #D4D4D5;
+    -webkit-box-shadow: -1px 0px 0px 0px #1A2428;
+            box-shadow: -1px 0px 0px 0px #1A2428;
   }
   .ui[class*="mobile reversed"].celled.grid > .row > .column:last-child {
     -webkit-box-shadow: none;
@@ -1569,8 +1569,8 @@
   
 /* Celled Reversed */
   .ui[class*="tablet reversed"].celled.grid > .row > .column:first-child {
-    -webkit-box-shadow: -1px 0px 0px 0px #D4D4D5;
-            box-shadow: -1px 0px 0px 0px #D4D4D5;
+    -webkit-box-shadow: -1px 0px 0px 0px #1A2428;
+            box-shadow: -1px 0px 0px 0px #1A2428;
   }
   .ui[class*="tablet reversed"].celled.grid > .row > .column:last-child {
     -webkit-box-shadow: none;
@@ -1619,8 +1619,8 @@
   
 /* Celled Reversed */
   .ui[class*="computer reversed"].celled.grid > .row > .column:first-child {
-    -webkit-box-shadow: -1px 0px 0px 0px #D4D4D5;
-            box-shadow: -1px 0px 0px 0px #D4D4D5;
+    -webkit-box-shadow: -1px 0px 0px 0px #1A2428;
+            box-shadow: -1px 0px 0px 0px #1A2428;
   }
   .ui[class*="computer reversed"].celled.grid > .row > .column:last-child {
     -webkit-box-shadow: none;

@@ -1,0 +1,113 @@
+@import 'variables';
+@import 'mixins';
+
+@media (max-width: 768px) {
+  .ui.desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .ui.mobile {
+    display: none !important;
+  }
+}
+
+body {
+  font-family: $sans;
+  color: $c-white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  &.ui.header{
+    font-family: $serif;
+    font-weight: 400;
+    color: $c-text;
+  }
+}
+
+.ui.breadcrumb .gold.divider {
+  color: $c-text !important;
+}
+
+.ui.custom.rating {
+  .active.icon {
+    &::before {
+      font-family: Icons;
+      content: "\f04d";
+      color: $c-text;
+      text-shadow: 0 -1px 0 $c-borderGold, -1px 0 0 $c-borderGold, 0 1px 0 $c-borderGold, 1px 0 0 $c-borderGold;
+    }
+  }
+  .icon {
+    &::before {
+      font-family: Icons;
+      content: "\f04d";
+      color: lighten($c-backgroundLight, 5%);
+    }
+  }
+  /* Hmm... Maybe, maybe not
+  &.annie .active.icon::before {
+    color: #D3402A;
+    text-shadow: 0 -1px 0 darken(#D3402A, 10%), -1px 0 0 darken(#D3402A, 10%), 0 1px 0 darken(#D3402A, 10%), 1px 0 0 darken(#D3402A, 10%);
+  }
+  &.jinx .active.icon::before {
+    color: #D9507E;
+    text-shadow: 0 -1px 0 darken(#D9507E, 10%), -1px 0 0 darken(#D9507E, 10%), 0 1px 0 darken(#D9507E, 10%), 1px 0 0 darken(#D9507E, 10%);
+  }*/
+}
+
+.ui {
+  &.label {
+    &.bronze {
+      @include linear-split($c-bronze, darken($c-bronze, 8%));
+    }
+
+    &.silver {
+      @include linear-split($c-silver, darken($c-silver, 8%));
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    &.gold {
+      @include linear-split($c-gold, darken($c-gold, 8%));
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    &.platinum {
+      @include linear-split($c-platinum, darken($c-platinum, 8%));
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    &.diamond {
+      @include linear-split($c-diamond, darken($c-diamond, 8%));
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+
+.spell {
+  .colorFF9900, .name {
+    font-weight: bold;
+    color: $c-text;
+  }
+
+  .colorFFFFFF {
+    font-weight: bold;
+    color: $c-offWhite;
+  }
+
+  .colorFF8C00 {
+    font-weight: bold;
+    color: #FF8C00;
+  }
+
+  .color99FF99 {
+    font-weight: bold;
+    color: #99FF99;
+  }
+
+  .colorFFEB7F {
+    font-weight: bold;
+    color: #FFEB7F;
+  }
+}

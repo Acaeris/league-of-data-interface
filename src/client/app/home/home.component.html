@@ -1,10 +1,32 @@
-<p>Howdy! Here's a list of awesome computer scientists. Do you know any others? Add to the list yourself.</p>
+<header class="home">
+  <div class="ui home middle aligned stackable grid container">
+    <div class="ten wide column">
+      <h1 class="ui header">LOD.GG</h1>
+    </div>
+    <div class="six wide column">
+      <p>Artwork Here!</p>
+    </div>
+  </div>
+</header>
 
-<form (submit)="addName()">
-  <input [(ngModel)]="newName" name="newName" placeholder="Awesome Computer Scientist">
-  <button type="submit">Add</button>
-</form>
-
-<ul>
-  <li *ngFor="let name of names">{{ name }}</li>
-</ul>
+<section class="details">
+  <div class="ui middle aligned stackable grid container">
+    <div class="row">
+      <div class="eight wide column">
+        <h2 class="ui header">Summoner Analysis</h2>
+        <p>Using the Riot API, we analyse your match history to highlight areas
+          you excel at and where you could make improvements. Are you really as
+          good at Vayne as you think you are or are you a better Kog'maw?</p>
+        <a class="ui primary button">Get started!</a>
+      </div>
+      <div class="eight wide column">
+        <h2 class="ui header">Champion Analysis</h2>
+        <p>We analyse 1000s of matches, comparing the strengths and weakness of
+          champions, not just on overall performance but against their lane
+          opponents and as a part of the team composition as a whole. So who
+          should you really pick against that Katarina?</p>
+        <a class="ui primary button">Let's see!</a>
+      </div>
+    </div>
+  </div>
+</section>

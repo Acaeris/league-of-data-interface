@@ -1,3 +1,12 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+@borderRadius: 0;
+
+@background: @c-backgroundLight;
+@headerColor: @c-text;
+@metaColor: @textColor;
+
+@headerFontWeight: normal;
+@headerFontSize: @relativeMassive;

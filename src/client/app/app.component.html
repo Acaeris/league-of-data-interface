@@ -1,3 +1,5 @@
-<sd-toolbar></sd-toolbar>
-<sd-navbar></sd-navbar>
-<router-outlet></router-outlet>
+<ui-navbar></ui-navbar>
+<ui-sidebar></ui-sidebar>
+<ui-mobilebar [pageTitle]="pageTitle"></ui-mobilebar>
+<router-outlet (onComponentReady)="onComponentReady($event)"></router-outlet>
+<ui-footer></ui-footer>
