@@ -121,26 +121,26 @@
     {
       "title": "Solo",
       "spells": [
-        { "id": 1, "name": "Disintegrate.png", "key": "Q" },
-        { "id": 2, "name": "InfernalGuardian.png", "key": "R" },
-        { "id": 3, "name": "Incinerate.png", "key": "W"},
-        { "id": 1, "name": "Disintegrate.png", "key": "Q" }
+        { "id": 1, "image": "Disintegrate.png", "key": "Q" },
+        { "id": 2, "image": "InfernalGuardian.png", "key": "R" },
+        { "id": 3, "image": "Incinerate.png", "key": "W"},
+        { "id": 1, "image": "Disintegrate.png", "key": "Q" }
       ]
     }, {
       "title": "Teamfight 1",
       "spells": [
-        { "id": 2, "name": "InfernalGuardian.png", "key": "R" },
-        { "id": 3, "name": "Incinerate.png", "key": "W"},
-        { "id": 1, "name": "Disintegrate.png", "key": "Q" }
+        { "id": 2, "image": "InfernalGuardian.png", "key": "R" },
+        { "id": 3, "image": "Incinerate.png", "key": "W"},
+        { "id": 1, "image": "Disintegrate.png", "key": "Q" }
       ]
     }, {
       "title": "Teamfight 2",
       "spells": [
-        { "id": 4, "name": "InfernalGuardian.png", "key": "R" },
-        { "id": 1, "name": "Disintegrate.png", "key": "Q" },
-        { "id": 2, "name": "Incinerate.png", "key": "W"},
-        { "id": 3, "name": "MoltenShield.png", "key": "E"},
-        { "id": 1, "name": "Disintegrate.png", "key": "Q"}
+        { "id": 4, "image": "InfernalGuardian.png", "key": "R" },
+        { "id": 1, "image": "Disintegrate.png", "key": "Q" },
+        { "id": 2, "image": "Incinerate.png", "key": "W"},
+        { "id": 3, "image": "MoltenShield.png", "key": "E"},
+        { "id": 1, "image": "Disintegrate.png", "key": "Q"}
       ]
     }
   ],
@@ -149,14 +149,14 @@
       {
         "spells": [
           {
-            "name": "SummonerFlash.png",
-            "title": "Flash",
-            "tooltip": "Teleports your champion a short distance towards your cursor"
+            "name": "Flash",
+            "image": "SummonerFlash.png",
+            "description": "Teleports your champion a short distance towards your cursor"
           },
           {
-            "name": "SummonerDot.png",
-            "title": "Ignite",
-            "tooltip": "Sets enemies on fire"
+            "name": "Ignite",
+            "image": "SummonerDot.png",
+            "description": "Sets enemies on fire"
           }
         ],
         "pickRate": "95.14%",
@@ -165,8 +165,8 @@
       },
       {
         "spells": [
-          { "name": "SummonerFlash.png" },
-          { "name": "SummonerBoost.png" }
+          { "image": "SummonerFlash.png" },
+          { "image": "SummonerBoost.png" }
         ],
         "pickRate": "2.82%",
         "pickCount": "414",

@@ -5,7 +5,7 @@
       <div class="ui breadcrumb">
         <h5 class="ui block header">{{combo.title}}</h5>
         <span *ngFor="let spell of combo.spells; let isLast=last">
-          <ui-spell-icon type="spell" key="{{spell.key}}" name="{{spell.name}}"></ui-spell-icon>
+          <ui-spell-icon [spell]="spell"></ui-spell-icon>
           <i class="gold right arrow icon divider" *ngIf="!isLast"></i>
         </span>
       </div>
@@ -13,7 +13,7 @@
   </div>
   <div class="five wide column">
     <h3 class="ui top attached header segment" *ngIf="champion.rating">Strength over Time</h3>
-    <table class="ui bottom attached definition table" *ngIf="champion.rating">
+    <table class="ui unstackable bottom attached definition table" *ngIf="champion.rating">
       <tbody>
         <tr>
           <td>Early</td>
@@ -30,7 +30,7 @@
       </tbody>
     </table>
     <h3 class="ui top attached header segment" *ngIf="champion.stats">Base Stats</h3>
-    <table class="ui bottom attached definition table" *ngIf="champion.stats">
+    <table class="ui unstackable bottom attached definition table" *ngIf="champion.stats">
       <tbody>
         <tr>
           <td>Health</td>

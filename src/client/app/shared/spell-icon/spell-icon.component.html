@@ -1,2 +1,8 @@
-<span class="ui bottom attached label" *ngIf="key">{{key}}</span>
-<img class="ui {{class}} image" src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/{{type}}/{{name}}" />
+<ng-container *ngIf="spell">
+  <span class="ui bottom attached label" *ngIf="spell.key">{{spell.key}}</span>
+  <img src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/spell/{{spell.image}}" />
+</ng-container>
+<ng-container *ngIf="passive">
+  <span class="ui bottom attached label" *ngIf="passive.key">{{passive.key|capitalize}}</span>
+  <img src="http://ddragon.leagueoflegends.com/cdn/7.5.1/img/passive/{{passive.image}}" />
+</ng-container>

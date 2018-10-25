@@ -103,18 +103,18 @@
     {
       "title": "Test 1",
       "spells": [
-        { "id": 1, "name": "ViQ.png", "key": "Q" },
-        { "id": 2, "name": "ViE.png", "key": "E" },
-        { "id": 3, "name": "ViR.png", "key": "R"},
-        { "id": 4, "name": "ViE.png", "key": "E"}
+        { "id": 1, "image": "ViQ.png", "key": "Q" },
+        { "id": 2, "image": "ViE.png", "key": "E" },
+        { "id": 3, "image": "ViR.png", "key": "R"},
+        { "id": 4, "image": "ViE.png", "key": "E"}
       ]
     }, {
       "title": "Test 2",
       "spells": [
-        { "id": 1, "name": "ViR.png", "key": "Q" },
-        { "id": 2, "name": "ViE.png", "key": "E" },
-        { "id": 3, "name": "ViQ.png", "key": "R"},
-        { "id": 4, "name": "ViE.png", "key": "E"}
+        { "id": 1, "image": "ViR.png", "key": "Q" },
+        { "id": 2, "image": "ViE.png", "key": "E" },
+        { "id": 3, "image": "ViQ.png", "key": "R"},
+        { "id": 4, "image": "ViE.png", "key": "E"}
       ]
     }
   ],

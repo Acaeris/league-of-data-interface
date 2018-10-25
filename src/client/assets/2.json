@@ -100,9 +100,9 @@
     {
       "title": "Test",
       "spells": [
-        { "id": 1, "name": "JinxW.png", "key": "W" },
-        { "id": 2, "name": "JinxE.png", "key": "E" },
-        { "id": 3, "name": "JinxR.png", "key": "R"}
+        { "id": 1, "image": "JinxW.png", "key": "W" },
+        { "id": 2, "image": "JinxE.png", "key": "E" },
+        { "id": 3, "image": "JinxR.png", "key": "R"}
       ]
     }
   ],

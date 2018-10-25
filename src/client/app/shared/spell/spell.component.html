@@ -2,7 +2,7 @@
   <div class="ui stackable grid">
     <div class="eleven wide column">
       <h3 class="ui header">{{ spell.name }}</h3>
-      <ui-spell-icon type="spell" key="{{ spell.key }}" name="{{ spell.image }}" class="left floated"></ui-spell-icon>
+      <ui-spell-icon suiTooltip [spell]="spell" class="left floated"></ui-spell-icon>
       <p [innerHTML]="tooltip"></p>
     </div>
     <div class="five wide column">
