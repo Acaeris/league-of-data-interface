@@ -38,6 +38,12 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
     this.route.queryParams.subscribe(
       params => this.getChampion(this.id, params['v'])
     );
+    $('.ui.dropdown.champions').dropdown({
+      onChange: (value: number, text: string) => {
+        this.id = value;
+        this.getChampion(value, this.version);
+      }
+    });
   }
 
   /**
@@ -49,12 +55,6 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
     });
     $('.ui.tabular.menu .item').each(function(i: number, e) {
       $(e).tab();
-    });
-    $('.ui.dropdown.champions').dropdown({
-      onChange: (value: number, text: string) => {
-        this.id = value;
-        this.getChampion(value, this.version);
-      }
     });
   }
 

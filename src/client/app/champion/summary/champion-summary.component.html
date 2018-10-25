@@ -1,47 +1,49 @@
 <div class="ui stackable grid">
   <div class="eleven wide column">
-    <table class="ui unstackable very basic table" *ngIf="champion.recommend.summonerSpells">
-      <thead>
-        <tr>
-          <th>Recommended Summoner Spells</th>
-          <th>Pick Rate</th>
-          <th>Win Rate</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let group of champion.recommend.summonerSpells">
-          <td>
-            <span *ngFor="let spell of group.spells; let isLast=last">
-              <ui-spell-icon suiTooltip variation="mini" [spell]="spell"></ui-spell-icon>
-              <i *ngIf="!isLast">&nbsp;</i>
-            </span>
-          </td>
-          <td>
-            <strong>{{group.pickRate}}</strong><br />
-            {{group.pickCount}}
-          </td>
-          <td>
-            {{group.winRate}}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <table class="ui unstackable very basic table" *ngIf="champion.recommend.skillBuild">
-      <thead>
-        <tr>
-          <th>Recommended Skill Build</th>
-          <th>Pick Rate</th>
-          <th>Win Rate</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+    <ng-container *ngIf="champion.recommend">
+      <table class="ui unstackable very basic table" *ngIf="champion.recommend.summonerSpells">
+        <thead>
+          <tr>
+            <th>Recommended Summoner Spells</th>
+            <th>Pick Rate</th>
+            <th>Win Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let group of champion.recommend.summonerSpells">
+            <td>
+              <span *ngFor="let spell of group.spells; let isLast=last">
+                <ui-spell-icon suiTooltip variation="mini" [spell]="spell"></ui-spell-icon>
+                <i *ngIf="!isLast">&nbsp;</i>
+              </span>
+            </td>
+            <td>
+              <strong>{{group.pickRate}}</strong><br />
+              {{group.pickCount}}
+            </td>
+            <td>
+              {{group.winRate}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="ui unstackable very basic table" *ngIf="champion.recommend.skillBuild">
+        <thead>
+          <tr>
+            <th>Recommended Skill Build</th>
+            <th>Pick Rate</th>
+            <th>Win Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-container>
   </div>
   <div class="five wide column">
 

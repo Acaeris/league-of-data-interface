@@ -26,8 +26,8 @@ export class ProjectConfig extends SeedConfig {
       ...this.NPM_DEPENDENCIES,
       {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
       // {src: 'lodash/lodash.min.js', inject: 'libs'},
-      {src: 'chart.js/dist/Chart.min.js', inject: 'libs'},
-      {src: 'd3/dist/d3.min.js', inject: 'libs'}
+      // {src: 'chart.js/dist/Chart.min.js', inject: 'libs'},
+      // {src: 'd3/dist/d3.min.js', inject: 'libs'}
     ];
 
     // Add `local` third-party libraries to be injected/bundled.
