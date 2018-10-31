@@ -4,9 +4,13 @@
     <div class="ui basic segment" *ngFor="let combo of champion.combos">
       <div class="ui breadcrumb">
         <h5 class="ui block header">{{combo.title}}</h5>
-        <span *ngFor="let spell of combo.spells; let isLast=last">
-          <ui-spell-icon [spell]="spell"></ui-spell-icon>
-          <i class="gold right arrow icon divider" *ngIf="!isLast"></i>
+        <span *ngFor="let combospell of combo.spells; let isLast=last">
+          <ng-container *ngFor="let spell of champion.spells">
+            <ng-container *ngIf="combospell == spell.key">
+              <ui-spell-icon suiTooltip [spell]="spell"></ui-spell-icon>
+              <i class="gold right arrow icon divider" *ngIf="!isLast"></i>
+            </ng-container>
+          </ng-container>
         </span>
       </div>
     </div>

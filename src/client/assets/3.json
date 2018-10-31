@@ -102,20 +102,10 @@
   "combos": [
     {
       "title": "Test 1",
-      "spells": [
-        { "id": 1, "image": "ViQ.png", "key": "Q" },
-        { "id": 2, "image": "ViE.png", "key": "E" },
-        { "id": 3, "image": "ViR.png", "key": "R"},
-        { "id": 4, "image": "ViE.png", "key": "E"}
-      ]
+      "spells": ["Q", "R", "E", "E"]
     }, {
       "title": "Test 2",
-      "spells": [
-        { "id": 1, "image": "ViR.png", "key": "Q" },
-        { "id": 2, "image": "ViE.png", "key": "E" },
-        { "id": 3, "image": "ViQ.png", "key": "R"},
-        { "id": 4, "image": "ViE.png", "key": "E"}
-      ]
+      "spells": ["R", "E", "Q", "E"]
     }
   ],
   "version": "7.5.1",

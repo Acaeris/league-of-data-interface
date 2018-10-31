@@ -120,28 +120,13 @@
   "combos": [
     {
       "title": "Solo",
-      "spells": [
-        { "id": 1, "image": "Disintegrate.png", "key": "Q" },
-        { "id": 2, "image": "InfernalGuardian.png", "key": "R" },
-        { "id": 3, "image": "Incinerate.png", "key": "W"},
-        { "id": 1, "image": "Disintegrate.png", "key": "Q" }
-      ]
+      "spells": ["Q", "R", "W", "Q"]
     }, {
       "title": "Teamfight 1",
-      "spells": [
-        { "id": 2, "image": "InfernalGuardian.png", "key": "R" },
-        { "id": 3, "image": "Incinerate.png", "key": "W"},
-        { "id": 1, "image": "Disintegrate.png", "key": "Q" }
-      ]
+      "spells": ["R", "W", "Q"]
     }, {
       "title": "Teamfight 2",
-      "spells": [
-        { "id": 4, "image": "InfernalGuardian.png", "key": "R" },
-        { "id": 1, "image": "Disintegrate.png", "key": "Q" },
-        { "id": 2, "image": "Incinerate.png", "key": "W"},
-        { "id": 3, "image": "MoltenShield.png", "key": "E"},
-        { "id": 1, "image": "Disintegrate.png", "key": "Q"}
-      ]
+      "spells": ["R", "Q", "W", "E", "Q"]
     }
   ],
   "recommend": {
@@ -172,7 +157,8 @@
         "pickCount": "414",
         "winRate": "50%"
       }
-    ]
+    ],
+    "skillBuild": ["Q", "E"]
   },
   "version": "7.5.1",
   "region": "EUW"

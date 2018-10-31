@@ -99,11 +99,7 @@
   "combos": [
     {
       "title": "Test",
-      "spells": [
-        { "id": 1, "image": "JinxW.png", "key": "W" },
-        { "id": 2, "image": "JinxE.png", "key": "E" },
-        { "id": 3, "image": "JinxR.png", "key": "R"}
-      ]
+      "spells": ["W", "E", "R"]
     }
   ],
   "version": "7.5.1",
