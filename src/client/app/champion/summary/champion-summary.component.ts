@@ -14,5 +14,9 @@ import { Champion } from '../../models/champion';
 export class ChampionSummaryComponent {
   @Input() champion: Champion;
 
-  constructor() {}
+  levels: number[];
+
+  constructor() {
+    this.levels = Array(18).fill().map((x,i)=>i + 1);
+  }
 }

@@ -1,51 +1,55 @@
 <div class="ui stackable grid">
-  <div class="eleven wide column">
+  <div class="sixteen wide column">
     <ng-container *ngIf="champion.recommend">
-      <table class="ui unstackable very basic table" *ngIf="champion.recommend.summonerSpells">
-        <thead>
-          <tr>
-            <th>Recommended Summoner Spells</th>
-            <th>Pick Rate</th>
-            <th>Win Rate</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let group of champion.recommend.summonerSpells">
-            <td>
-              <span *ngFor="let spell of group.spells; let isLast=last">
-                <ui-spell-icon suiTooltip variation="mini" [spell]="spell"></ui-spell-icon>
-                <i *ngIf="!isLast">&nbsp;</i>
-              </span>
-            </td>
-            <td>
-              <strong>{{group.pickRate}}</strong><br />
-              {{group.pickCount}}
-            </td>
-            <td>
-              {{group.winRate}}
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="ui unstackable very basic table" *ngIf="champion.recommend.skillBuild">
-        <thead>
-          <tr>
-            <th>Recommended Skill Build</th>
-            <th>Pick Rate</th>
-            <th>Win Rate</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+      <ng-container *ngIf="champion.recommend.summonerSpells">
+        <h3 class="ui header">Recommended Summoner Spells</h3>
+        <table class="ui unstackable definition table">
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th>Pick Rate</th>
+              <th>Win Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let group of champion.recommend.summonerSpells">
+              <td class="collapsing">
+                <span *ngFor="let spell of group.spells; let isLast=last">
+                  <ui-spell-icon suiTooltip variation="mini" [spell]="spell"></ui-spell-icon>
+                  <i *ngIf="!isLast">&nbsp;</i>
+                </span>
+              </td>
+              <td>
+                <strong>{{group.pickRate}}</strong><br />
+                {{group.pickCount}}
+              </td>
+              <td>
+                {{group.winRate}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </ng-container>
+      <ng-container *ngIf="champion.recommend.skillBuild">
+        <h3 class="ui header">Recommended Skill Build</h3>
+        <table class="ui unstackable definition table">
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th class="center aligned" *ngFor="let level of levels">{{level}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let spell of champion.spells">
+              <td class="collapsing center aligned">{{spell.key}}</td>
+              <td class="center aligned" *ngFor="let skill of champion.recommend.skillBuild">
+                <i class="ui checkmark icon" *ngIf="skill == spell.key"></i>
+                <ng-container *ngIf="skill != spell.key">&nbsp;</ng-container>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </ng-container>
     </ng-container>
-  </div>
-  <div class="five wide column">
-
   </div>
 </div>
