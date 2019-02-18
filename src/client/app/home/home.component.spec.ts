@@ -7,7 +7,6 @@ import {
 import { Observable } from 'rxjs';
 
 import { HomeComponent } from './home.component';
-import { NameListService } from '../shared/name-list/name-list.service';
 
 export function main() {
   describe('Home component', () => {
@@ -18,7 +17,6 @@ export function main() {
         imports: [FormsModule],
         declarations: [HomeComponent],
         providers: [
-          { provide: NameListService, useValue: new MockNameListService() }
         ]
       });
 
@@ -32,17 +30,11 @@ export function main() {
             const fixture = TestBed.createComponent(HomeComponent);
             const homeInstance = fixture.debugElement.componentInstance;
             const homeDOMEl = fixture.debugElement.nativeElement;
-            const mockNameListService =
-              fixture.debugElement.injector.get<any>(NameListService) as MockNameListService;
-            const nameListServiceSpy = spyOn(mockNameListService, 'get').and.callThrough();
-
-            mockNameListService.returnValue = ['1', '2', '3'];
 
             fixture.detectChanges();
 
             expect(homeInstance.nameListService).toEqual(jasmine.any(MockNameListService));
             expect(homeDOMEl.querySelectorAll('li').length).toEqual(3);
-            expect(nameListServiceSpy.calls.count()).toBe(1);
 
             homeInstance.newName = 'Minko';
             homeInstance.addName();

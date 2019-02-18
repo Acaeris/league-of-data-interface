@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { Config } from './shared/config/env.config';
 
 /**
@@ -8,11 +8,12 @@ import { Config } from './shared/config/env.config';
   moduleId: module.id,
   selector: 'sd-app',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css'],
-  host: {'class' : 'pusher'}
+  styleUrls: ['app.component.css']
 })
 export class AppComponent {
-  pageTitle: string = "League of Data";
+  @HostBinding('class') cssClass = 'pusher';
+
+  pageTitle = 'League of Data';
 
   constructor() {
     console.log('Environment config', Config);

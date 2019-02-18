@@ -1,5 +1,5 @@
 export interface Rating {
-  early: number,
-  mid: number,
-  late: number
+  early: number;
+  mid: number;
+  late: number;
 }

@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { Stat } from  '../../models/stat';
+import { Component, Input, HostBinding } from '@angular/core';
+import { Stat } from '../../models/stat';
 
 /**
  * This class represents the Statistic component
@@ -8,11 +8,9 @@ import { Stat } from  '../../models/stat';
   moduleId: module.id,
   selector: 'ui-statistic',
   templateUrl: 'statistic.component.html',
-  styleUrls: ['statistic.component.css'],
-  host: {'class': 'statistic'}
+  styleUrls: ['statistic.component.css']
 })
 export class StatisticComponent {
   @Input() stat: Stat;
-
-  constructor() {}
+  @HostBinding('class') cssClass = 'statistic';
 }

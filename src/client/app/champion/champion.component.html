@@ -16,7 +16,7 @@
       <a class="item" data-tab="details">Details</a>
       <a class="item" data-tab="abilities">Abilities</a>
     </div>
-    <champion-summary *ngIf="champion" [champion]="champion" class="active" data-tab="summary"></champion-summary>
+    <champion-summary *ngIf="champion" [champion]="champion" active data-tab="summary"></champion-summary>
     <champion-details *ngIf="champion" [champion]="champion" data-tab="details"></champion-details>
     <champion-abilities *ngIf="champion" [champion]="champion" data-tab="abilities"></champion-abilities>
   </div>

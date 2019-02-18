@@ -21,11 +21,11 @@ export function main() {
                 TestBed
                     .compileComponents()
                     .then(() => {
-                        let fixture = TestBed.createComponent(SummonerComponent);
-                        let summonerInstance = fixture.debugElement.componentInstance;
-                        let summonerDOME1 = fixture.debugElement.nativeElement;
-                        let mockSummonerService = <MockSummonerService>fixture.debugElement.injector.get(SummonerService);
-                        let summonerServiceSpy = spyOn(mockSummonerService, 'get').and.callThrough();
+                        const fixture = TestBed.createComponent(SummonerComponent);
+                        const summonerInstance = fixture.debugElement.componentInstance;
+                        const summonerDOME1 = fixture.debugElement.nativeElement;
+                        const mockSummonerService = <MockSummonerService>fixture.debugElement.injector.get(SummonerService);
+                        const summonerServiceSpy = spyOn(mockSummonerService, 'get').and.callThrough();
 
                         mockSummonerService.returnValue = 'Acaeris';
 
@@ -36,8 +36,8 @@ export function main() {
                         expect(summonerDOME1.querySelectorAll('.ui.profile.card .header').textContent).toEqual('Acaeris');
                         expect(summonerServiceSpy.calls.count()).toBe(1);
                     });
-            }))
-    })
+            }));
+    });
 }
 
 class MockSummonerService {

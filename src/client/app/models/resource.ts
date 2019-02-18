@@ -1,4 +1,4 @@
 export interface Resource {
-  name: string,
-  values: number[]
+  name: string;
+  values: number[];
 }

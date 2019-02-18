@@ -14,24 +14,18 @@ import {
 } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ToolbarComponent } from './core/toolbar/toolbar.component';
-import { NavbarComponent } from './core/navbar/navbar.component';
 
 export function main() {
 
   describe('App component', () => {
 
     const config: Route[] = [
-      { path: '', component: HomeComponent },
-      { path: 'about', component: AboutComponent }
+      { path: '', component: HomeComponent }
     ];
     beforeEach(() => {
       TestBed.configureTestingModule({
         imports: [FormsModule, RouterTestingModule.withRoutes(config)],
-        declarations: [TestComponent, ToolbarComponent,
-          NavbarComponent, AppComponent,
-          HomeComponent, AboutComponent],
+        declarations: [TestComponent, AppComponent, HomeComponent],
         providers: [
           { provide: APP_BASE_HREF, useValue: '/' }
         ]

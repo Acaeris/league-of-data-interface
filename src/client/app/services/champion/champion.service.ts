@@ -19,9 +19,10 @@ export class ChampionService {
     /**
      * Returns an Observable for the HTTP GET request for the JSON resource.
      * @param {number} id - ID of the champion to fetch.
+     * @param {string} version - Version to fetch.
      * @return {Champion} The Observable for the HTTP request.
      */
-    get(id: number): Observable<Champion> {
+    get(id: number, version: string): Observable<Champion> {
       // Still fetching mock data but should just need to point to backend to work now.
       return this.http.get<Champion>('assets/' + id + '.json')
         .pipe(
@@ -33,7 +34,7 @@ export class ChampionService {
      * Handle HTTP error
      */
     private handleError (error: any) {
-        let errMsg = (error.message) ? error.message :
+        const errMsg = (error.message) ? error.message :
             error.status ? `${error.status} - ${error.statusText}` : 'Server error';
         console.error(errMsg);
         return Observable.throw(errMsg);

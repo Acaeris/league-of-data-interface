@@ -14,7 +14,7 @@ import { Champion } from '../models/champion';
 })
 export class ChampionComponent implements OnInit, AfterViewChecked {
   champion: Champion;
-	errorMessage: string;
+  errorMessage: string;
   id: number;
   version: string;
   background: string;
@@ -26,7 +26,7 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
 	 * @param {ChampionService} championService - The injected ChampionService
    * @param {ActivatedRoute} route - Router
 	 */
-	constructor(private championService: ChampionService, private route: ActivatedRoute) { }
+  constructor(private championService: ChampionService, private route: ActivatedRoute) { }
 
   /**
    * Get the champion data
@@ -51,7 +51,8 @@ export class ChampionComponent implements OnInit, AfterViewChecked {
    */
   ngAfterViewChecked() {
     $('.ui.rating').each(function (i: number, e) {
-      $(e).rating('set rating', $(e).attr("data-rating"));
+      // '+' converts the 'string' response to a number.
+      $(e).rating('set rating', +$(e).attr('data-rating'));
     });
     $('.ui.tabular.menu .item').each(function(i: number, e) {
       $(e).tab();

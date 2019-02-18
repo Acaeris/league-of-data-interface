@@ -18,7 +18,7 @@
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
     "typeRoots": ["../../node_modules/@types", "../../node_modules"],
-    "types": ["node", "jasmine", "systemjs", "d3"]
+    "types": ["node", "jasmine", "systemjs", "d3", "jquery", "semantic-ui"]
   },
   "compileOnSave": false,
   "exclude": ["app/main-prod.ts"]

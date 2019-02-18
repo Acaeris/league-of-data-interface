@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 /**
  * This class represents the navigation bar component.
@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
   moduleId: module.id,
   selector: 'ui-navbar',
   templateUrl: 'navbar.component.html',
-  styleUrls: ['navbar.component.css'],
-  host: {'class': 'ui fixed desktop menu'}
+  styleUrls: ['navbar.component.css']
 })
-export class NavbarComponent { }
+export class NavbarComponent {
+  @HostBinding('class') cssClass:string = 'ui fixed desktop menu';
+}

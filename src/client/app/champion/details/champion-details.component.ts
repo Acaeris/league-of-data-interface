@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
 import { Champion } from '../../models/champion';
 
 /**
@@ -8,11 +8,9 @@ import { Champion } from '../../models/champion';
   moduleId: module.id,
   selector: 'champion-details',
   templateUrl: 'champion-details.component.html',
-  styleUrls: ['champion-details.component.css'],
-  host: {'class': 'ui bottom attached tab segment'}
+  styleUrls: ['champion-details.component.css']
 })
 export class ChampionDetailsComponent {
   @Input() champion: Champion;
-
-  constructor() {}
+  @HostBinding('class') cssClass = 'ui bottom attached tab segment';
 }

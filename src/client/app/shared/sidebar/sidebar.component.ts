@@ -1,4 +1,4 @@
-import { Component, ElementRef, AfterContentChecked } from '@angular/core';
+import { Component, ElementRef, AfterContentChecked, HostBinding } from '@angular/core';
 
 /**
  * This class represents the sidebar component.
@@ -7,10 +7,11 @@ import { Component, ElementRef, AfterContentChecked } from '@angular/core';
   moduleId: module.id,
   selector: 'ui-sidebar',
   templateUrl: 'sidebar.component.html',
-  styleUrls: ['sidebar.component.css'],
-  host: {'class': 'ui vertical sidebar menu'}
+  styleUrls: ['sidebar.component.css']
 })
 export class SidebarComponent implements AfterContentChecked {
+  @HostBinding('class') cssClass = 'ui vertical sidebar menu';
+
   constructor(private el: ElementRef) { }
 
   ngAfterContentChecked() {
