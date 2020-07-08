@@ -11,5 +11,5 @@ import { Component, Input, HostBinding } from '@angular/core';
 })
 export class MobilebarComponent {
   @Input() pageTitle: string;
-  @HostBinding('class') cssClass = 'ui fixed mobile menu';
+  @HostBinding('class') cssClass = 'ui fixed menu';
 }

@@ -102,6 +102,9 @@
       "spells": ["W", "E", "R"]
     }
   ],
+  "recommend": {
+    "skillBuild": ["Q", "W", "Q", "W", "E", "R", "W", "W", "W", "Q", "R", "Q", "Q", "E", "E", "R", "E", "E"]
+  },
   "version": "7.5.1",
   "region": "EUW"
 }

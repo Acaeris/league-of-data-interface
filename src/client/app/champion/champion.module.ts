@@ -9,13 +9,17 @@ import { ChampionDetailsComponent } from './details/champion-details.component';
 import { ChampionRoutingModule } from './champion-routing.module';
 import { ChampionService } from '../services/champion/champion.service';
 import { SemanticRatingDirective } from '../directives/suiRating.directive';
+import { ChampionCardStatsComponent } from './card/stats/stats.component';
+import { RecommendedSkillsComponent } from './summary/recommended-skills/recommended-skills.component';
 
 @NgModule({
   imports: [CommonModule, ChampionRoutingModule, SharedModule],
   declarations: [
     ChampionComponent,
     ChampionCardComponent,
+    ChampionCardStatsComponent,
     ChampionSummaryComponent,
+    RecommendedSkillsComponent,
     ChampionAbilitiesComponent,
     ChampionDetailsComponent,
     SemanticRatingDirective
@@ -23,7 +27,9 @@ import { SemanticRatingDirective } from '../directives/suiRating.directive';
   exports: [
     ChampionComponent,
     ChampionCardComponent,
+    ChampionCardStatsComponent,
     ChampionSummaryComponent,
+    RecommendedSkillsComponent,
     ChampionAbilitiesComponent,
     ChampionDetailsComponent
   ],

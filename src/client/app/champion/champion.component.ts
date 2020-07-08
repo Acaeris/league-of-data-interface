@@ -1,4 +1,4 @@
-import { Component, EventEmitter, AfterViewChecked, OnInit, ElementRef } from '@angular/core';
+import { Component, AfterViewChecked, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ChampionService } from '../services/champion/champion.service';
 import { Champion } from '../models/champion';

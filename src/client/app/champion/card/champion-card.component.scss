@@ -4,11 +4,22 @@ h2 {
   margin-bottom: 0.1em;
 }
 
-img {
-  padding: 1px;
-  border: 1px solid $c-borderGold;
-}
-
 .segment {
   background-color: $c-backgroundDarkAlpha;
+}
+
+.ui.left.floated.image {
+  margin-bottom: 0;
+}
+
+.champion-icon {
+  width: 96px;
+  height: 96px;
+  display: block;
+  transition: background-image 1s ease-in-out;
+  background-repeat: no-repeat;
+  background-size: 96px 96px;
+  background-position: -1px -1px;
+  padding: 1px;
+  border: 1px solid $c-borderGold;
 }

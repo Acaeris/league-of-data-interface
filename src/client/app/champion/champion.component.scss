@@ -5,7 +5,7 @@
   background-size: cover;
   transition: background-image 1s ease-in-out;
 
-  .container {
+  > div {
     margin-top: 2.8em !important;
     padding-bottom: 1em;
   }
@@ -18,5 +18,7 @@
 
   .ui.card {
     background-color: $c-backgroundLightAlpha;
+    //background-color: transparent;
+    //box-shadow: none;
   }
 }

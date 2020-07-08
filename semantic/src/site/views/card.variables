@@ -8,5 +8,5 @@
 @headerColor: @c-text;
 @metaColor: @textColor;
 
-@headerFontWeight: normal;
+@headerLineHeightOffset: 0;
 @headerFontSize: @relativeMassive;

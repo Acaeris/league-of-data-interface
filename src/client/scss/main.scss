@@ -1,18 +1,6 @@
 @import 'variables';
 @import 'mixins';
 
-@media (max-width: 768px) {
-  .ui.desktop {
-    display: none !important;
-  }
-}
-
-@media (min-width: 769px) {
-  .ui.mobile {
-    display: none !important;
-  }
-}
-
 body {
   font-family: $sans;
   color: $c-white;
@@ -20,7 +8,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   &.ui.header{
-    font-family: $serif;
+    font-family: $sans;
     font-weight: 400;
     color: $c-text;
   }

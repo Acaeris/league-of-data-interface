@@ -1,5 +1,11 @@
 @import '../../../scss/variables';
 
+:host {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+
 .ui.fixed.desktop.menu {
   border-bottom: 1px solid $c-borderGold;
 }

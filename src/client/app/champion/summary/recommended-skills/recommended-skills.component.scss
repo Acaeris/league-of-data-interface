@@ -1,0 +1,14 @@
+@import '../../../../scss/variables.scss';
+
+.ui.steps {
+    border: none;
+
+    .step {
+        border-color: transparent;
+        padding: 1em 1em 1em 1.2em;
+
+        &:after {
+            border-color: $c-text;
+        }
+    }
+}

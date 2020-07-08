@@ -21,7 +21,7 @@
 @solidBorderColor: @c-border;
 
 /* Fonts */
-@headerFont: 'Forum', serif;
+@headerFont: "Raleway", "Helvetica Neue", Arial, Helvetica, sans-serif;
 
 /* Details */
 @headerFontWeight: normal;

@@ -1,19 +1,14 @@
 <div class="content">
   <i class="right floated star icon"></i>
   <div class="ui left floated image">
-    <img src="http://ddragon.leagueoflegends.com/cdn/{{champion.version}}/img/champion/{{champion.imageName | stripSpaces}}.png" />
+    <span class="champion-icon" [style.background-image]="'url(http://ddragon.leagueoflegends.com/cdn/' + champion.version + '/img/champion/' + (champion.imageName | stripSpaces) + '.png)'"></span>
   </div>
   <h2 class="header">{{champion.name}}</h2>
   <div class="meta">
-    <p class="subheader">{{champion.title}}</p>
-    <div class="ui labels">
+    <div class="right floated ui labels">
       <span class="ui label" *ngFor="let tag of champion.tags">{{tag}}</span>
     </div>
-    <p class="right floated date">Version: {{champion.version}}</p>
+    <p class="subheader">{{champion.title}}</p>
   </div>
 </div>
-<div class="ui segment">
-  <div class="ui mini four statistics">
-    <ui-statistic *ngFor="let stat of champion.playStats" [stat]="stat"></ui-statistic>
-  </div>
-</div>
+<champion-card-stats [playStats]="champion.playStats"></champion-card-stats>

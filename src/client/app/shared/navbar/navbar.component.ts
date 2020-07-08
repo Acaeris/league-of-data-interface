@@ -10,5 +10,5 @@ import { Component, HostBinding } from '@angular/core';
   styleUrls: ['navbar.component.css']
 })
 export class NavbarComponent {
-  @HostBinding('class') cssClass:string = 'ui fixed desktop menu';
+  @HostBinding('class') cssClass = 'ui fixed menu';
 }

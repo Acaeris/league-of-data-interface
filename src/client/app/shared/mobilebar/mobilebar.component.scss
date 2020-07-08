@@ -2,4 +2,8 @@
 
 :host {
   border-bottom: 1px solid $c-borderGold !important;
+
+  @media (min-width: 769px) {
+    display: none !important;
+  }
 }

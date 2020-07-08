@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.4.0 - Accordion
+ * # Semantic UI 2.4.2 - Accordion
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -31,7 +31,7 @@
 /* Default Styling */
 .ui.accordion .title:not(.ui) {
   padding: 0.5em 0em;
-  font-family: 'Forum', serif;
+  font-family: "Raleway", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 1em;
   color: rgba(255, 255, 255, 0.87);
 }

@@ -1,0 +1,23 @@
+<h3 class="ui header">Recommended Skill Builds</h3>
+<table class="ui unstackable table">
+    <thead>
+    <tr>
+        <th>Skill Order</th>
+        <th class="center aligned">Pick Rate</th>
+        <th class="center aligned">Win Rate</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let skillBuild of skillBuilds">
+        <td>
+            <div class="ui mini steps">
+                <div class="step" *ngFor="let skill of skillBuild.skills">
+                    <ui-spell-icon suiTooltip variation="mini" [spell]="spells | filterSpells: skill"></ui-spell-icon>
+                </div>
+            </div>
+        </td>
+        <td class="center aligned">{{ skillBuild.pickRate }}%</td>
+        <td class="center aligned">{{ skillBuild.winRate }}%</td>
+    </tr>
+    </tbody>
+</table>

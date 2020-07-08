@@ -158,7 +158,18 @@
         "winRate": "50%"
       }
     ],
-    "skillBuild": ["Q", "W", "Q", "W", "E", "R", "W", "W", "W", "Q", "R", "Q", "Q", "E", "E", "R", "E", "E"]
+    "skillBuilds": [
+      {
+        "skills": ["Q", "W", "E"],
+        "pickRate": 28.1,
+        "winRate": 60.9
+      },
+      {
+        "skills": ["Q", "E", "W"],
+        "pickRate": 3.4,
+        "winRate": 56.3
+      }
+    ]
   },
   "version": "7.5.1",
   "region": "EUW"

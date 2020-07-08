@@ -1,5 +1,5 @@
 <div class="ui stackable grid">
-  <div class="sixteen wide column">
+  <div class="ten wide column">
     <ng-container *ngIf="champion.recommend">
       <ng-container *ngIf="champion.recommend.summonerSpells">
         <h3 class="ui header">Recommended Summoner Spells</h3>
@@ -30,26 +30,10 @@
           </tbody>
         </table>
       </ng-container>
-      <ng-container *ngIf="champion.recommend.skillBuild">
-        <h3 class="ui header">Recommended Skill Build</h3>
-        <table class="ui unstackable definition table">
-          <thead>
-            <tr>
-              <th>&nbsp;</th>
-              <th class="center aligned" *ngFor="let level of levels">{{level}}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let spell of champion.spells">
-              <td class="collapsing center aligned">{{spell.key}}</td>
-              <td class="center aligned" *ngFor="let skill of champion.recommend.skillBuild">
-                <i class="ui checkmark icon" *ngIf="skill == spell.key"></i>
-                <ng-container *ngIf="skill != spell.key">&nbsp;</ng-container>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </ng-container>
+      <recommended-skills *ngIf="champion.recommend.skillBuilds" [skillBuilds]="champion.recommend.skillBuilds" [spells]="champion.spells"></recommended-skills>
     </ng-container>
+  </div>
+  <div class="six wide column">
+
   </div>
 </div>

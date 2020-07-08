@@ -8,6 +8,7 @@ import { SpellComponent } from './spell/spell.component';
 import { SpellIconComponent } from './spell-icon/spell-icon.component';
 import { CapitalizePipe } from '../pipes/capitalize.pipe';
 import { StripSpacesPipe } from '../pipes/strip-spaces.pipe';
+import { FilterSpellsPipe } from '../pipes/filter-spells.pipe';
 
 import { SemanticDropdownDirective } from '../directives/suiDropdown.directive';
 import { SemanticTooltipDirective } from '../directives/suiTooltip.directive';
@@ -24,7 +25,8 @@ import { SemanticTooltipDirective } from '../directives/suiTooltip.directive';
       SemanticDropdownDirective,
       SemanticTooltipDirective,
       CapitalizePipe,
-      StripSpacesPipe
+      StripSpacesPipe,
+      FilterSpellsPipe
   ],
   exports: [
     StatisticComponent,
@@ -36,7 +38,8 @@ import { SemanticTooltipDirective } from '../directives/suiTooltip.directive';
     FormsModule,
     RouterModule,
     CapitalizePipe,
-    StripSpacesPipe
+    StripSpacesPipe,
+    FilterSpellsPipe
   ]
 })
 export class SharedModule {
